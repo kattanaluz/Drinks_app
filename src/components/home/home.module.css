@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
 
 .h1AndImageContainer {
   display: flex;
@@ -9,14 +9,13 @@
 }
 
 .landPageH1 {
-  font-size: 80px;
-  margin-top: 100px;
-  margin-left: 60px;
+  font-size: 90px;
+  margin-top: 110px;
+  margin-left: 400px;
   position: absolute;
   letter-spacing: 2px;
-  font-family: "Indie Flower", cursive;
-  font-family: "Permanent Marker", cursive;
-  color: #406d2c;
+  font-family: "Abril Fatface", cursive;
+  color: #e8e9a1;
 }
 
 .divH2 {
@@ -30,21 +29,21 @@
   font-family: "Noto Sans", sans-serif;
   font-size: 21px;
   text-align: center;
-  color: #5e751d;
+  color: #190538;
 }
 
 .landPageImage {
   margin-top: 20px;
-  max-width: 1200px;
-  max-height: 300px;
+  max-width: 1500px;
+  max-height: auto;
 }
 
 .homeButton {
   margin-top: 40px;
   padding: 10px 15px 10px 15px;
   width: 160px;
-  border: 1px solid #9db45d;
-  background-color: #9db45d;
+  border: 1px solid #e06c6c;
+  background-color: #e06c6c;
   color: rgb(255, 255, 255);
   font-size: 17px;
   font-weight: bold;

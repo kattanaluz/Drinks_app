@@ -1,7 +1,7 @@
 import Image from "../../components/image";
 import H1 from "../h1";
 import H2 from "../h2";
-import landImage from "./land_image.png";
+import landImage from "./roxo.png";
 import Button from "../../components/button";
 import css from "./home.module.css";
 
