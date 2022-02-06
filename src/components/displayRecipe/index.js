@@ -1,6 +1,6 @@
 import Paragraph from "../paragraph";
-import H2 from "../h2";
-import H1 from "../h1";
+import H2 from "../button/h2";
+import H1 from "../button/h1";
 export default function DisplayRecipe() {
   return (
     <div>
