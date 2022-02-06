@@ -11,8 +11,8 @@ export default function Input({
         type="text"
         className={inputClassName}
         onChange={onChange}
-        onKeyUp={onKeyUp}
         placeholder={placeholder}
+        onKeyUp={onKeyUp}
       />
     </div>
   );

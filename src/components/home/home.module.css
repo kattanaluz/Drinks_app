@@ -29,7 +29,7 @@
   font-family: "Noto Sans", sans-serif;
   font-size: 21px;
   text-align: center;
-  color: #190538;
+  color: rgb(54, 54, 54);
 }
 
 .landPageImage {
@@ -54,7 +54,7 @@
 .searchInput {
   padding: 15px;
   width: 500px;
-  border: 2px solid #94b899;
+  border: 2px solid #8f7ca8;
   border-radius: 50px;
   font-family: "Noto Sans", sans-serif;
   font-size: 17px;

@@ -1,36 +1,54 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap");
 
-.recipeContainer {
+.recipeWrapper {
+  width: auto;
+  height: auto;
+  background-color: rgb(243, 243, 250);
   font-family: "Noto Sans", sans-serif;
-  font-size: 15px;
-  text-align: left;
+  max-width: 100%;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  flex-flow: column wrap;
+  margin: 5% 20% 0 20%;
+  border-radius: 30px;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
-.h1Div {
-  padding: 20px;
+.ingredients {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 16px;
+  text-align: start;
 }
 
-h1 {
+.recipeH2 {
+  padding-bottom: 10px;
   font-size: 30px;
+  color: rgb(54, 54, 54);
   text-align: center;
+  border-bottom: solid 4px rgb(255, 255, 255);
+  border-bottom-style: dotted;
 }
 
-h2 {
-  font-size: 20px;
+.ingredientsParagraph {
+  font-weight: 900;
 }
 
-.recipeIngAndMeas {
-  column-count: 2;
-  column-rule-width: 1px;
-  border-bottom: solid 2px rgb(213, 219, 217);
+ul {
+  list-style: none;
 }
 
-.recipeInstructions {
-  max-width: 400px;
+li {
+  line-height: 1.7;
+  border: solid 0.5 rgb(15, 33, 34);
+}
+
+.methodParagraph {
+  font-weight: 900;
+}
+
+p {
   text-align: justify;
+  font-size: 16px;
+  line-height: 1.5;
 }

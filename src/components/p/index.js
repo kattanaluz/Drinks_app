@@ -1,3 +1,3 @@
-export default function Paragraph({ text }) {
-  return <p>{text}</p>;
+export default function Paragraph({ text, className }) {
+  return <p className={className}>{text}</p>;
 }

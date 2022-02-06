@@ -9,13 +9,15 @@ function App() {
     setInput(e.target.value);
   }
 
-  const [text, setText] = useState();
-  function handleEnter(e) {
+  const [text, setText] = useState("margarita");
+  function handleClick() {
+    setText(input);
+  }
+  function onKeyUp(e) {
     if (e.keyCode === 13) {
       setText(input);
     }
   }
-
   const [data, setData] = useState([]);
   useEffect(() => {
     async function getData() {
@@ -23,16 +25,16 @@ function App() {
         `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${text}`
       );
       const data = await response.json();
-      setData(data.drinks[0]);
-      console.log(data.drinks[0]);
+      const drinkRecipe = data.drinks[0];
+      setData(drinkRecipe);
     }
     getData();
   }, [text]);
 
   return (
     <div className="App">
-      <Home />
-      <RecipeDisplay />
+      <Home onClick={handleClick} onChange={getInputText} onKeyUp={onKeyUp} />
+      <RecipeDisplay data={data} />
     </div>
   );
 }

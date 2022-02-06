@@ -2,11 +2,11 @@ import Image from "../image";
 import H1 from "../h1";
 import H2 from "../h2";
 import Input from "../input";
-import landImage from "./roxo.png";
+import landImage from "./land_image.png";
 import Button from "../button";
 import css from "./home.module.css";
 
-export default function Home() {
+export default function Home({ onClick, onChange, onKeyUp }) {
   const landText =
     "Find out hundreds of delicious cocktail recipes from expert bartenders around the world.";
   const buttonText = "search a recipe";
@@ -36,8 +36,14 @@ export default function Home() {
           placeholder={inputText}
           divClassName={css.divInput}
           inputClassName={css.searchInput}
+          onChange={onChange}
+          onKeyUp={onKeyUp}
         />
-        <Button text={buttonText} className={css.homeButton} />
+        <Button
+          text={buttonText}
+          className={css.homeButton}
+          onClick={onClick}
+        />
       </div>
     </div>
   );
