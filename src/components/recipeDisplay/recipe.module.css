@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+
+.recipeContainer {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 15px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.h1Div {
+  padding: 20px;
+}
+
+h1 {
+  font-size: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+.recipeIngAndMeas {
+  column-count: 2;
+  column-rule-width: 1px;
+  border-bottom: solid 2px rgb(213, 219, 217);
+}
+
+.recipeInstructions {
+  max-width: 400px;
+  text-align: justify;
+}

@@ -34,14 +34,34 @@
 
 .landPageImage {
   margin-top: 20px;
-  max-width: 1500px;
+  max-width: 100%;
   max-height: auto;
 }
 
+.searchAndButtonContainer {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.divInput {
+  display: flex;
+  flex-direction: row;
+  padding-right: 30px;
+}
+
+.searchInput {
+  padding: 15px;
+  width: 500px;
+  border: 2px solid #94b899;
+  border-radius: 50px;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 17px;
+}
+
 .homeButton {
-  margin-top: 40px;
   padding: 10px 15px 10px 15px;
-  width: 160px;
   border: 1px solid #e06c6c;
   background-color: #e06c6c;
   color: rgb(255, 255, 255);

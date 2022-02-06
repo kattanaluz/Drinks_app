@@ -1,13 +1,16 @@
-import Image from "../../components/image";
+import Image from "../image";
 import H1 from "../h1";
 import H2 from "../h2";
+import Input from "../input";
 import landImage from "./roxo.png";
-import Button from "../../components/button";
+import Button from "../button";
 import css from "./home.module.css";
 
-export function Home() {
-  const landText = `Find out hundreds of delicious cocktail recipes from expert bartenders around the world.`;
-  const buttonText = `search a recipe`;
+export default function Home() {
+  const landText =
+    "Find out hundreds of delicious cocktail recipes from expert bartenders around the world.";
+  const buttonText = "search a recipe";
+  const inputText = "Type here to search a drink recipe";
 
   return (
     <div>
@@ -28,7 +31,14 @@ export function Home() {
         h2ClassName={css.landPageH2}
         divH2ClassName={css.divH2}
       />
-      <Button text={buttonText} className={css.homeButton} />
+      <div className={css.searchAndButtonContainer}>
+        <Input
+          placeholder={inputText}
+          divClassName={css.divInput}
+          inputClassName={css.searchInput}
+        />
+        <Button text={buttonText} className={css.homeButton} />
+      </div>
     </div>
   );
 }
