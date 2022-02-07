@@ -9,8 +9,8 @@ import css from "./home.module.css";
 export default function Home({ onClick, onChange, onKeyUp }) {
   const landText =
     "Find out hundreds of delicious cocktail recipes from expert bartenders around the world.";
-  const buttonText = "search a recipe";
-  const inputText = "Type here to search a drink recipe";
+  const buttonText = "search recipe";
+  const inputText = "Type here";
 
   return (
     <div>
