@@ -10,7 +10,7 @@ export default function Home({ onClick, onChange, onKeyUp }) {
   const landText =
     "Find out hundreds of delicious cocktail recipes from expert bartenders around the world.";
   const buttonText = "search recipe";
-  const inputText = "Type here";
+  const inputText = "type here";
 
   return (
     <div>

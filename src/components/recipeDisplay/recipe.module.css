@@ -28,10 +28,12 @@
   text-align: center;
   border-bottom: solid 4px rgb(255, 255, 255);
   border-bottom-style: dotted;
+  margin-bottom: 5px;
 }
 
 .ingredientsParagraph {
   font-weight: 900;
+  margin: 0;
 }
 
 ul {
@@ -45,6 +47,7 @@ li {
 
 .methodParagraph {
   font-weight: 900;
+  margin: 0;
 }
 
 p {
