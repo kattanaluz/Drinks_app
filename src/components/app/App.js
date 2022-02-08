@@ -9,7 +9,7 @@ function App() {
     setInput(e.target.value);
   }
 
-  const [text, setText] = useState("margarita");
+  const [text, setText] = useState("mojito");
   function handleClick() {
     setText(input);
   }
@@ -34,7 +34,7 @@ function App() {
   return (
     <div className="App">
       <Home onClick={handleClick} onChange={getInputText} onKeyUp={onKeyUp} />
-      <RecipeDisplay data={data} />
+      {!data ? "" : <RecipeDisplay data={data} />}
     </div>
   );
 }
