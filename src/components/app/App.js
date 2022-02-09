@@ -1,7 +1,8 @@
-import "./App.css";
 import Home from "../home";
 import RecipeDisplay from "../recipeDisplay";
 import { useState, useEffect } from "react";
+import Paragraph from "../p";
+import css from "./App.module.css";
 
 function App() {
   const [input, setInput] = useState();
@@ -9,7 +10,7 @@ function App() {
     setInput(e.target.value);
   }
 
-  const [text, setText] = useState("mojito");
+  const [text, setText] = useState("margarita");
   function handleClick() {
     setText(input);
   }
@@ -25,18 +26,39 @@ function App() {
         `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${text}`
       );
       const data = await response.json();
-      const drinkRecipe = data.drinks[0];
-      setData(drinkRecipe);
+      // console.log(data);
+      if (data && data.drinks && data.drinks.length > 0) {
+        const drinkRecipe = data;
+        setData(drinkRecipe);
+      } else {
+        setData(null);
+      }
     }
     getData();
   }, [text]);
 
-  return (
-    <div className="App">
-      <Home onClick={handleClick} onChange={getInputText} onKeyUp={onKeyUp} />
-      {!data ? "" : <RecipeDisplay data={data} />}
-    </div>
-  );
+  if (data && data.drinks && data.drinks.length > 0) {
+    var rows = [];
+    for (var i = 0; i < data.drinks.length; i++) {
+      rows.push(<RecipeDisplay data={data.drinks[i]} key={i} />);
+    }
+    return (
+      <div className="App">
+        <Home onClick={handleClick} onChange={getInputText} onKeyUp={onKeyUp} />
+        {rows}
+      </div>
+    );
+  } else {
+    return (
+      <div className="App">
+        <Home onClick={handleClick} onChange={getInputText} onKeyUp={onKeyUp} />
+        <Paragraph
+          className={css.noRecipeFound}
+          text={`OOPS! Your search for "${text}" did not return any results. Please search for a shorter or different term.`}
+        />
+      </div>
+    );
+  }
 }
 
 export default App;
