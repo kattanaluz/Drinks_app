@@ -54,7 +54,7 @@ function App() {
         <Home onClick={handleClick} onChange={getInputText} onKeyUp={onKeyUp} />
         <Paragraph
           className={css.noRecipeFound}
-          text={`OOPS! Your search for "${text}" did not return any results. Please search for a shorter or different term.`}
+          text={`OOPS! Your search for "${text}" did not return any results. Please search for a different term.`}
         />
       </div>
     );
