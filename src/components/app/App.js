@@ -1,7 +1,6 @@
 import Home from "../home";
 import RecipeDisplay from "../recipeDisplay";
 import { useState, useEffect } from "react";
-import Paragraph from "../p";
 import css from "./App.module.css";
 
 function App() {
@@ -10,7 +9,7 @@ function App() {
     setInput(e.target.value);
   }
 
-  const [text, setText] = useState("margarita");
+  const [text, setText] = useState("mojito");
   function handleClick() {
     setText(input);
   }
@@ -33,6 +32,7 @@ function App() {
       } else {
         setData(null);
       }
+      console.log(data);
     }
     getData();
   }, [text]);
@@ -52,10 +52,10 @@ function App() {
     return (
       <div className="App">
         <Home onClick={handleClick} onChange={getInputText} onKeyUp={onKeyUp} />
-        <Paragraph
-          className={css.noRecipeFound}
-          text={`OOPS! Your search for "${text}" did not return any results. Please search for a different term.`}
-        />
+        <p className={css.noRecipeFound}>
+          OOPS! Your search for {text} did not return any results. Please search
+          for a different term.
+        </p>
       </div>
     );
   }

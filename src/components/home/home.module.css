@@ -1,35 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
-
-.h1AndImageContainer {
+.ImageContainer {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
-.landPageH1 {
-  font-size: 6vw;
-  margin-top: 6%;
-  margin-left: 26%;
+h1 {
+  font-size: 5rem;
+  margin-top: 13%;
   position: absolute;
   letter-spacing: 2px;
   font-family: "Abril Fatface", cursive;
-  color: #e8e9a1;
-}
-
-.divH2 {
-  display: flex;
-  flex-flow: row;
-  justify-content: center;
-  margin-top: 30px;
+  color: #fce3e3;
+  text-shadow: 3px 3px #1d0707;
 }
 
 .landPageH2 {
   font-family: "Noto Sans", sans-serif;
-  font-size: 18px;
+  font-size: 1.3rem;
+  font-weight: 400;
   text-align: center;
-  color: rgb(65, 63, 63);
+  color: #fce3e3;
+  margin-top: 2rem;
 }
 
 .landPageImage {
@@ -40,28 +33,24 @@
 .searchAndButtonContainer {
   display: flex;
   flex-flow: row;
-  justify-content: center;
-  margin-top: 2%;
+  gap: 23rem;
+  margin-top: 23%;
+  position: absolute;
 }
 
-.divInput {
-  display: flex;
-  flex-direction: row;
-  padding-right: 20px;
+::placeholder {
+  color: #fae5e5;
 }
 
 .searchInput {
-  padding: 15px;
-  width: 100%;
-  border: 1.5px solid #8f7ca8;
+  padding: 20px 30px 20px 30px;
+  width: 200%;
+  color: #fce3e3;
+  background-color: rgba(14, 14, 14, 0.178);
+  border: 1px solid rgba(14, 14, 14, 0.178);
   border-radius: 50px;
   font-family: "Noto Sans", sans-serif;
-  font-size: 16px;
-  box-shadow: 2px 6px 7px #cfcece;
-}
-
-.searchInput:hover {
-  box-shadow: 2px 6px 4px #cfcece;
+  font-size: 1.3rem;
 }
 
 .searchInput:focus {
@@ -69,67 +58,149 @@
 }
 
 .homeButton {
-  padding: 10px 15px 10px 15px;
-  border: 1px solid #e06c6c;
-  background-color: #e06c6c;
-  color: rgb(255, 255, 255);
-  font-size: 17px;
-  font-weight: bold;
+  padding: 20px 30px 20px 30px;
+  border: 1px solid rgba(0, 0, 0, 0.719);
+  border-radius: 50px;
+  background-color: rgba(0, 0, 0, 0.705);
+  color: #fae5e5;
+  font-size: 18px;
+  font-weight: 500;
+  width: fit-content;
   font-family: "Noto Sans", sans-serif;
-  border-radius: 30px;
-  box-shadow: 2px 6px 7px #cfcece;
 }
 
-.homeButton:hover {
-  box-shadow: 2px 6px 4px #cfcece;
-  background-color: #db6262;
+@media screen and (max-width: 1160px) {
+  h1 {
+    font-size: 4.5rem;
+    margin-top: 13%;
+  }
 }
-
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 1140px) {
+  h1 {
+    font-size: 4.3rem;
+    margin-top: 13%;
+  }
+}
+@media screen and (max-width: 1100px) {
+  h1 {
+    font-size: 4.1rem;
+    margin-top: 13%;
+  }
+  .searchAndButtonContainer {
+    gap: 12rem;
+  }
   .searchInput {
-    padding: 10px;
+    width: 150%;
+    padding: 15px 30px 15px 30px;
+    font-size: 1rem;
+  }
+  .homeButton {
+    padding: 15px 30px 15px 30px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  h1 {
+    font-size: 4rem;
+    margin-top: 12%;
+  }
+  .searchAndButtonContainer {
+    gap: 12rem;
+  }
+  .searchInput {
+    width: 150%;
+    padding: 15px 30px 15px 30px;
+    font-size: 1rem;
+  }
+  .homeButton {
+    padding: 15px 30px 15px 30px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  h1 {
+    font-size: 3.2rem;
+    margin-top: 12%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  h1 {
+    font-size: 2.6rem;
+    margin-top: 12%;
+    text-shadow: 2px 2px #1d0707;
+  }
+  .searchAndButtonContainer {
+    gap: 3.5rem;
+  }
+  .searchInput {
+    width: 100%;
+    padding: 10px 25px 10px 25px;
+    font-size: 1rem;
+  }
+  .homeButton {
+    padding: 15px 25px 15px 25px;
+    font-size: 12px;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .landPageH1 {
-    margin-top: 6%;
-    margin-left: 24;
+  h1 {
+    font-size: 2rem;
+    margin-top: 13%;
+    text-shadow: 1.3px 1.3px #1d0707;
+  }
+  .searchAndButtonContainer {
+    gap: 1rem;
+  }
+  .searchInput {
+    width: 80%;
+    padding: 10px 20px 10px 20px;
+    font-size: 0.8rem;
   }
   .homeButton {
-    font-size: 15px;
+    padding: 10px 20px 10px 20px;
+    font-size: 0.8rem;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .landPageH1 {
-    margin-top: 6%;
-    margin-left: 24.5%;
+  h1 {
+    font-size: 1.5rem;
+    margin-top: 12%;
+  }
+  .searchAndButtonContainer {
+    gap: 10px;
   }
   .searchInput {
-    padding: 10px;
+    width: 80%;
+    padding: 10px 20px 10px 20px;
+    font-size: 0.8rem;
+  }
+  .homeButton {
+    padding: 10px 20px 10px 20px;
+    font-size: 0.8rem;
   }
 }
 
 @media screen and (max-width: 400px) {
-  .landPageH1 {
-    margin-top: 7%;
-    margin-left: 22.5%;
+  h1 {
+    font-size: 1.3rem;
+    margin-top: 13%;
   }
-}
-
-@media screen and (max-width: 380px) {
-  .searchInput {
-    padding: 5px;
-    font-size: 15px;
+  .searchAndButtonContainer {
+    gap: 1px;
   }
-}
-
-@media screen and (max-width: 340px) {
   .searchInput {
-    padding: 0px;
-    font-size: 13px;
-    width: 100%;
+    width: 70%;
+    padding: 5px 20px 5px 20px;
+    font-size: 0.7rem;
+  }
+  .homeButton {
+    padding: 5px 10px 5px 10px;
+    font-size: 0.7rem;
   }
 }
 
