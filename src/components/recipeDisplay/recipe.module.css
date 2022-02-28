@@ -18,7 +18,7 @@
 }
 
 .recipeHeader:hover {
-  background-color: rgba(238, 217, 228, 0.219);
+  background-color: rgba(10, 10, 10, 0.74);
 }
 
 .drinkImage {
@@ -37,12 +37,12 @@
   background-color: rgba(243, 200, 218, 0);
   border: none;
   font-size: 1rem;
-  color: black;
+  color: #fff5f5;
 }
 
 /* MODAL STYLES */
 .modal {
-  background-color: rgba(24, 25, 31, 0.938);
+  background-color: rgba(32, 29, 32, 0.938);
   color: #fce3e3;
   width: fit-content;
   height: fit-content;
@@ -63,7 +63,7 @@
 .recipeWrapper {
   width: 40rem;
   height: fit-content;
-  background-color: rgba(24, 25, 31, 0.103);
+  background-color: rgba(32, 28, 31, 0.103);
   font-family: "Noto Sans", sans-serif;
   display: flex;
   flex-flow: column wrap;
@@ -160,7 +160,7 @@ p {
     padding: 2px;
   }
   .recipeH2 {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
   .drinkImage {
     width: 5rem;
@@ -176,6 +176,10 @@ p {
   }
   h3 {
     font-size: 14px;
+  }
+  .openModalBtn {
+    font-size: 10px;
+    font-weight: 500;
   }
 }
 
