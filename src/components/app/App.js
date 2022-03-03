@@ -1,6 +1,5 @@
 import HomePage from "../../pages/homePage";
-import RecipePage from "../../pages/recipePage";
-import { Routes, Route } from "react-router-dom";
+import Hero from "../hero ";
 /* import { useState, useEffect } from "react";
  import css from "./App.module.css"; */
 
@@ -43,6 +42,7 @@ function App() {
     } */
   return (
     <div className="App">
+      <Hero />
       <HomePage />
       {/*  <Routes>
         <Route path="/" element={<HomePage />} />

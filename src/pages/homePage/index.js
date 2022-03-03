@@ -2,9 +2,11 @@ import Home from "../../components/home";
 import { useState, useEffect } from "react";
 import Recipe from "../../components/recipe";
 import css from "./home.module.css";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 
 export default function HomePage() {
+  const navigate = useNavigate();
+
   const [input, setInput] = useState();
   function getInputText(e) {
     console.log(e.target.value);
@@ -14,10 +16,12 @@ export default function HomePage() {
   const [text, setText] = useState("mojito");
   function handleClick() {
     setText(input);
+    navigate("/recipe");
   }
   function onKeyUp(e) {
     if (e.keyCode === 13) {
       setText(input);
+      navigate(`/recipe/${text}`);
     }
   }
 
@@ -45,13 +49,10 @@ export default function HomePage() {
     return (
       <div>
         <Home onClick={handleClick} onChange={getInputText} onKeyUp={onKeyUp} />
-        {/*   <Routes>
-          <Route path="/recipe" element={<Recipe content={content} />} />
-        </Routes> */}
-        {/*   <div className={css.recipeWrapper}> {rows} </div> */}
+        {content}
       </div>
     );
-  } /* else {
+  } else {
     return (
       <div className="App">
         <Home onClick={handleClick} onChange={getInputText} onKeyUp={onKeyUp} />
@@ -61,5 +62,5 @@ export default function HomePage() {
         </p>
       </div>
     );
-  } */
+  }
 }
