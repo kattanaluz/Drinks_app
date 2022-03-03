@@ -19,6 +19,7 @@ export default function RecipeDisplay({ data }) {
         <h2 className={css.recipeH2} onClick={openModal}>
           {data.strDrink}
         </h2>
+        <div className={css.division}></div>
         <button className={css.openModalBtn} onClick={openModal}>
           see recipe
         </button>

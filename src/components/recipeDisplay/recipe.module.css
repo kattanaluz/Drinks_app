@@ -2,9 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap");
 
 .recipeResults {
-  margin: 0.5rem auto;
-  display: inline-grid;
   width: min-content;
+  margin: 0.5rem auto;
   padding: 2rem;
 }
 
@@ -12,32 +11,40 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem;
-  border-radius: 20px;
-  margin: 5px;
+  padding: 0rem;
+  background-color: white;
+  margin: 1rem;
+  border: 1.5px solid rgb(245, 223, 215);
 }
 
 .recipeHeader:hover {
-  background-color: rgba(10, 10, 10, 0.74);
+  border: 1.5px solid rgb(240, 175, 149);
 }
 
 .drinkImage {
-  width: 14rem;
-  border-radius: 10px;
+  width: 11rem;
 }
 
 .recipeH2 {
   font-size: 1.2rem;
   text-align: center;
   font-family: "Noto Sans", sans-serif;
+  color: rgb(248, 73, 4);
+}
+
+.division {
+  width: 70%;
+  height: 1px;
+  background-color: rgb(245, 223, 215);
 }
 
 .openModalBtn {
   font-family: "Noto Sans", sans-serif;
   background-color: rgba(243, 200, 218, 0);
   border: none;
-  font-size: 1rem;
-  color: #fff5f5;
+  font-size: 0.9rem;
+  color: rgb(25, 26, 27);
+  padding: 1rem;
 }
 
 /* MODAL STYLES */
@@ -113,7 +120,10 @@ p {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 620px) {
+  .drinkImage {
+    width: 9rem;
+  }
   p {
     font-size: 14px;
   }
@@ -131,10 +141,10 @@ p {
   }
 }
 
-@media screen and (max-width: 500px) {
-  .recipeResults {
+@media screen and (max-width: 525px) {
+  /* .recipeResults {
     margin: 0 0 0 0;
-  }
+  } */
   .drinkImage {
     width: 7rem;
   }
@@ -146,14 +156,14 @@ p {
   }
   .recipeHeader {
     padding: 1px;
-    border-radius: 20px;
+
     margin: 1px;
   }
 }
 
 @media screen and (max-width: 400px) {
   .recipeResults {
-    margin: 10px;
+    /*     margin: 10px; */
   }
   .recipeHeader {
     margin: 1px;
@@ -166,7 +176,7 @@ p {
     width: 5rem;
   }
   .recipeWrapper {
-    width: 15rem;
+    width: 12rem;
   }
   p {
     font-size: 12px;

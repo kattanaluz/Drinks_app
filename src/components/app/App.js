@@ -45,7 +45,7 @@ function App() {
     return (
       <div className="App">
         <Home onClick={handleClick} onChange={getInputText} onKeyUp={onKeyUp} />
-        {rows}
+        <div className={css.recipeWrapper}> {rows} </div>
       </div>
     );
   } else {

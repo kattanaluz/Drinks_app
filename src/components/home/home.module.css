@@ -7,16 +7,16 @@
 }
 
 h1 {
-  font-size: 5rem;
-  margin-top: 13%;
+  font-size: 3.5em;
+  margin-top: 9%;
   position: absolute;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   font-family: "Abril Fatface", cursive;
-  color: #fce3e3;
+  color: #faeded;
   text-shadow: 3px 3px #1d0707;
 }
 
-.landPageH2 {
+/* .landPageH2 {
   font-family: "Noto Sans", sans-serif;
   font-size: 1.3rem;
   font-weight: 400;
@@ -24,7 +24,7 @@ h1 {
   color: #fce3e3;
   margin-top: 2rem;
 }
-
+ */
 .landPageImage {
   max-width: 100%;
   max-height: auto;
@@ -33,8 +33,8 @@ h1 {
 .searchAndButtonContainer {
   display: flex;
   flex-flow: row;
-  gap: 23rem;
-  margin-top: 23%;
+  gap: 21rem;
+  margin-top: 17%;
   position: absolute;
 }
 
@@ -45,22 +45,22 @@ h1 {
 .searchInput {
   padding: 20px 30px 20px 30px;
   width: 200%;
-  color: #fce3e3;
+  color: #fcecec;
   background-color: rgba(14, 14, 14, 0.178);
   border: 1px solid rgba(14, 14, 14, 0.178);
-  border-radius: 50px;
+  border-radius: 25px;
   font-family: "Noto Sans", sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 
 .searchInput:focus {
   outline: none;
 }
 
-.homeButton {
+.searchButton {
   padding: 20px 30px 20px 30px;
   border: 1px solid rgba(0, 0, 0, 0.719);
-  border-radius: 50px;
+  border-radius: 25px;
   background-color: rgba(0, 0, 0, 0.705);
   color: #fae5e5;
   font-size: 18px;
@@ -71,20 +71,18 @@ h1 {
 
 @media screen and (max-width: 1160px) {
   h1 {
-    font-size: 4.5rem;
-    margin-top: 13%;
+    /*    font-size: 4.5rem;
+    margin-top: 13%; */
   }
 }
 @media screen and (max-width: 1140px) {
   h1 {
-    font-size: 4.3rem;
-    margin-top: 13%;
+    font-size: 3.3rem;
   }
 }
 @media screen and (max-width: 1100px) {
   h1 {
-    font-size: 4.1rem;
-    margin-top: 13%;
+    font-size: 3rem;
   }
   .searchAndButtonContainer {
     gap: 12rem;
@@ -94,7 +92,7 @@ h1 {
     padding: 15px 30px 15px 30px;
     font-size: 1rem;
   }
-  .homeButton {
+  .searchButton {
     padding: 15px 30px 15px 30px;
     font-size: 15px;
   }
@@ -102,34 +100,33 @@ h1 {
 
 @media screen and (max-width: 950px) {
   h1 {
-    font-size: 4rem;
-    margin-top: 12%;
-  }
-  .searchAndButtonContainer {
-    gap: 12rem;
-  }
-  .searchInput {
-    width: 150%;
-    padding: 15px 30px 15px 30px;
-    font-size: 1rem;
-  }
-  .homeButton {
-    padding: 15px 30px 15px 30px;
-    font-size: 15px;
+    font-size: 3rem;
+    margin-top: 8.5%;
   }
 }
 
 @media screen and (max-width: 900px) {
   h1 {
-    font-size: 3.2rem;
-    margin-top: 12%;
+    font-size: 2.6rem;
+    margin-top: 9%;
+  }
+  .searchAndButtonContainer {
+    gap: 11rem;
+  }
+  .searchInput {
+    width: 150%;
+    padding: 10px 25px 10px 25px;
+  }
+  .searchButton {
+    padding: 10px 25px 10px 25px;
+    font-size: 13px;
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 750px) {
   h1 {
-    font-size: 2.6rem;
-    margin-top: 12%;
+    font-size: 2rem;
+    margin-top: 10%;
     text-shadow: 2px 2px #1d0707;
   }
   .searchAndButtonContainer {
@@ -137,77 +134,77 @@ h1 {
   }
   .searchInput {
     width: 100%;
-    padding: 10px 25px 10px 25px;
     font-size: 1rem;
   }
   .homeButton {
-    padding: 15px 25px 15px 25px;
     font-size: 12px;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
   h1 {
-    font-size: 2rem;
-    margin-top: 13%;
+    font-size: 1.7rem;
+    margin-top: 9%;
     text-shadow: 1.3px 1.3px #1d0707;
   }
   .searchAndButtonContainer {
-    gap: 1rem;
+    gap: 3.8rem;
   }
   .searchInput {
-    width: 80%;
-    padding: 10px 20px 10px 20px;
+    width: 120%;
+    padding: 5px 10px 5px 10px;
     font-size: 0.8rem;
   }
-  .homeButton {
-    padding: 10px 20px 10px 20px;
+  .searchButton {
+    padding: 5px 10px 5px 10px;
     font-size: 0.8rem;
   }
 }
 
+@media screen and (max-width: 520px) {
+  h1 {
+    font-size: 1.5rem;
+    margin-top: 9%;
+  }
+}
 @media screen and (max-width: 500px) {
   h1 {
     font-size: 1.5rem;
-    margin-top: 12%;
-  }
-  .searchAndButtonContainer {
-    gap: 10px;
-  }
-  .searchInput {
-    width: 80%;
-    padding: 10px 20px 10px 20px;
-    font-size: 0.8rem;
-  }
-  .homeButton {
-    padding: 10px 20px 10px 20px;
-    font-size: 0.8rem;
+    margin-top: 8%;
   }
 }
 
 @media screen and (max-width: 400px) {
   h1 {
     font-size: 1.3rem;
-    margin-top: 13%;
   }
   .searchAndButtonContainer {
-    gap: 1px;
+    gap: 1.9rem;
   }
   .searchInput {
-    width: 70%;
+    width: 90%;
     padding: 5px 20px 5px 20px;
     font-size: 0.7rem;
   }
-  .homeButton {
+  .searchButton {
     padding: 5px 10px 5px 10px;
     font-size: 0.7rem;
   }
 }
 
 @media screen and (max-width: 310px) {
+  h1 {
+    font-size: 1.1rem;
+    margin-top: 8%;
+  }
+  .searchAndButtonContainer {
+    gap: 1.1rem;
+  }
   .searchInput {
-    padding: 0px;
-    font-size: 10px;
-    width: 100%;
+    width: 80%;
+    padding: 3px 20px 3px 20px;
+  }
+  .searchButton {
+    padding: 3px 10px 3px 10px;
   }
 }
