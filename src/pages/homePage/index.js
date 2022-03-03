@@ -1,12 +1,13 @@
-import HomePage from "../../pages/homePage";
-import RecipePage from "../../pages/recipePage";
+import Home from "../../components/home";
+import { useState, useEffect } from "react";
+import Recipe from "../../components/recipe";
+import css from "./home.module.css";
 import { Routes, Route } from "react-router-dom";
-/* import { useState, useEffect } from "react";
- import css from "./App.module.css"; */
 
-function App() {
-  /*   const [input, setInput] = useState();
+export default function HomePage() {
+  const [input, setInput] = useState();
   function getInputText(e) {
+    console.log(e.target.value);
     setInput(e.target.value);
   }
 
@@ -19,6 +20,7 @@ function App() {
       setText(input);
     }
   }
+
   const [data, setData] = useState([]);
   useEffect(() => {
     async function getData() {
@@ -35,24 +37,21 @@ function App() {
     }
     getData();
   }, [text]);
-
   if (data && data.drinks && data.drinks.length > 0) {
-    var rows = [];
+    var content = [];
     for (var i = 0; i < data.drinks.length; i++) {
-      rows.push(<RecipeDisplay data={data.drinks[i]} key={i} />);
-    } */
-  return (
-    <div className="App">
-      <HomePage />
-      {/*  <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/recipe" element={<RecipePage />} />
-      </Routes> */}
-      {/* <Home onClick={handleClick} onChange={getInputText} onKeyUp={onKeyUp} /> */}
-      {/* <div className={css.recipeWrapper}> {rows} </div> */}
-    </div>
-  );
-} /*  else {
+      content.push(<Recipe data={data.drinks[i]} key={i} />);
+    }
+    return (
+      <div>
+        <Home onClick={handleClick} onChange={getInputText} onKeyUp={onKeyUp} />
+        {/*   <Routes>
+          <Route path="/recipe" element={<Recipe content={content} />} />
+        </Routes> */}
+        {/*   <div className={css.recipeWrapper}> {rows} </div> */}
+      </div>
+    );
+  } /* else {
     return (
       <div className="App">
         <Home onClick={handleClick} onChange={getInputText} onKeyUp={onKeyUp} />
@@ -62,7 +61,5 @@ function App() {
         </p>
       </div>
     );
-  } 
-*/
-
-export default App;
+  } */
+}

@@ -3,7 +3,7 @@ import Image from "../image";
 import Modal from "react-modal";
 import { useState } from "react";
 
-export default function RecipeDisplay({ data }) {
+export default function Recipe({ data }) {
   const [state, setState] = useState(false);
   function openModal() {
     setState(true);
