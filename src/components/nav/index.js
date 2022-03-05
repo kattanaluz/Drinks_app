@@ -7,7 +7,7 @@ export default function Nav() {
         <a>Cocktail of the day</a>
       </div>
       <div>
-        <a>surprize me!</a>
+        <a>Surprize me!</a>
       </div>
     </nav>
   );
