@@ -39,16 +39,16 @@ h1 {
 }
 
 ::placeholder {
-  color: #fae5e5;
+  color: #383636;
 }
 
 .searchInput {
   padding: 20px 30px 20px 30px;
   width: 200%;
-  color: #fcecec;
-  background-color: rgba(14, 14, 14, 0.178);
-  border: 1px solid rgba(14, 14, 14, 0.178);
-  border-radius: 25px;
+  color: #383636;
+  background-color: rgba(247, 244, 244, 0.712);
+  border: 1px solid rgba(245, 242, 242, 0.904);
+  border-radius: 15px;
   font-family: "Noto Sans", sans-serif;
   font-size: 1.1rem;
 }
@@ -59,22 +59,20 @@ h1 {
 
 .searchButton {
   padding: 20px 30px 20px 30px;
-  border: 1px solid rgba(0, 0, 0, 0.719);
-  border-radius: 25px;
-  background-color: rgba(0, 0, 0, 0.705);
-  color: #fae5e5;
+  border: 1px solid rgb(255, 92, 70);
+  border-radius: 20px;
+  background-color: rgb(255, 92, 70);
+  color: #f3efef;
   font-size: 18px;
   font-weight: 500;
   width: fit-content;
   font-family: "Noto Sans", sans-serif;
 }
 
-@media screen and (max-width: 1160px) {
-  h1 {
-    /*    font-size: 4.5rem;
-    margin-top: 13%; */
-  }
+.searchButton:hover {
+  border: 1px solid rgb(112, 45, 36);
 }
+
 @media screen and (max-width: 1140px) {
   h1 {
     font-size: 3.3rem;
@@ -177,6 +175,7 @@ h1 {
 @media screen and (max-width: 400px) {
   h1 {
     font-size: 1.3rem;
+    letter-spacing: 2px;
   }
   .searchAndButtonContainer {
     gap: 1.9rem;

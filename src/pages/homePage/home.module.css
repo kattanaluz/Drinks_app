@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+
+.noRecipeFound {
+  font-family: "Noto Sans", sans-serif;
+  text-align: center;
+  margin: 5rem 4rem 5rem 4rem;
+  font-size: 1.5rem;
+}
+
+.recipeWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: base-line;
+  margin-right: 5%;
+  margin-left: 5%;
+  flex-wrap: wrap;
+  border: solid 1px rgb(247, 192, 173);
+}
+
+/* .headingLine {
+  width: 70%;
+  height: 0.2rem;
+  background-color: rgb(245, 223, 215);
+  margin: auto;
+  margin-top: 5%;
+} */
+
+.h2Title {
+  font-size: 1.2rem;
+  color: #fcfafa;
+  background-color: rgb(255, 92, 70);
+  width: 42%;
+  padding: 1rem;
+  margin: auto;
+  margin-top: 2%;
+  text-align: center;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 800px) {
+  .h2Title {
+    font-size: 0.8rem;
+    padding: 0.4rem;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .h2Title {
+    width: 55%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .h2Title {
+    font-size: 0.6rem;
+    width: 55%;
+  }
+}

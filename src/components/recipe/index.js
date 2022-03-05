@@ -3,8 +3,7 @@ import Image from "../image";
 import Modal from "react-modal";
 import { useState } from "react";
 
-export default function RecipeDisplay({ data }) {
-  /*   Modal.setAppElement(".recipeH2"); */
+export default function Recipe({ data }) {
   const [state, setState] = useState(false);
   function openModal() {
     setState(true);
@@ -16,6 +15,7 @@ export default function RecipeDisplay({ data }) {
     <div className={css.recipeResults}>
       <div className={css.recipeHeader}>
         <Image src={data.strDrinkThumb} className={css.drinkImage} />
+        <p className={css.recipeType}>{data.strAlcoholic}</p>
         <h2 className={css.recipeH2} onClick={openModal}>
           {data.strDrink}
         </h2>

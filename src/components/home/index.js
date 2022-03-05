@@ -3,8 +3,9 @@ import Input from "../input";
 import landImage from "./drink.jpg";
 import Button from "../button";
 import css from "./home.module.css";
+import { VscSearch } from "react-icons/vsc";
 
-export default function Home({ onClick, onChange, onKeyUp }) {
+export default function HomePage({ onClick, onChange, onKeyUp }) {
   const buttonText = "search";
   const inputText = "Type here";
 

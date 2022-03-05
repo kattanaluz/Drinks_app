@@ -1,0 +1,23 @@
+.recipeWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: base-line;
+  margin-right: 5%;
+  margin-left: 5%;
+  flex-wrap: wrap;
+}
+
+.result {
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 2rem;
+  font-style: bold;
+  color: rgb(83, 83, 83);
+}
+
+@media screen and (max-width: 406px) {
+  .result {
+    font-size: 0.7rem;
+  }
+}

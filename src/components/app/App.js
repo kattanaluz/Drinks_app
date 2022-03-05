@@ -1,10 +1,12 @@
-import Home from "../home";
-import RecipeDisplay from "../recipeDisplay";
-import { useState, useEffect } from "react";
-import css from "./App.module.css";
+import HomePage from "../../pages/homePage";
+import Hero from "../hero ";
+/* import Nav from "../nav"; */
+
+/* import { useState, useEffect } from "react";
+ import css from "./App.module.css"; */
 
 function App() {
-  const [input, setInput] = useState();
+  /*   const [input, setInput] = useState();
   function getInputText(e) {
     setInput(e.target.value);
   }
@@ -25,14 +27,12 @@ function App() {
         `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${text}`
       );
       const data = await response.json();
-      // console.log(data);
       if (data && data.drinks && data.drinks.length > 0) {
         const drinkRecipe = data;
         setData(drinkRecipe);
       } else {
         setData(null);
       }
-      console.log(data);
     }
     getData();
   }, [text]);
@@ -41,14 +41,21 @@ function App() {
     var rows = [];
     for (var i = 0; i < data.drinks.length; i++) {
       rows.push(<RecipeDisplay data={data.drinks[i]} key={i} />);
-    }
-    return (
-      <div className="App">
-        <Home onClick={handleClick} onChange={getInputText} onKeyUp={onKeyUp} />
-        <div className={css.recipeWrapper}> {rows} </div>
-      </div>
-    );
-  } else {
+    } */
+  return (
+    <div className="App">
+      {/*       <Nav /> */}
+      <Hero />
+      {/* <HomePage /> * */}
+      {/*  <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/recipe" element={<RecipePage />} />
+      </Routes> */}
+      {/* <Home onClick={handleClick} onChange={getInputText} onKeyUp={onKeyUp} /> */}
+      {/* <div className={css.recipeWrapper}> {rows} </div> */}
+    </div>
+  );
+} /*  else {
     return (
       <div className="App">
         <Home onClick={handleClick} onChange={getInputText} onKeyUp={onKeyUp} />
@@ -58,7 +65,7 @@ function App() {
         </p>
       </div>
     );
-  }
-}
+  } 
+*/
 
 export default App;
