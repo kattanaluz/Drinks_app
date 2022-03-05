@@ -4,7 +4,7 @@ export default function Nav() {
   return (
     <nav className={css.navBar}>
       <div>
-        <a>cocktail of the day</a>
+        <a>Cocktail of the day</a>
       </div>
       <div>
         <a>surprize me!</a>
