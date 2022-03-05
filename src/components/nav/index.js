@@ -4,10 +4,10 @@ export default function Nav() {
   return (
     <nav className={css.navBar}>
       <div>
-        <a>Cocktail of the day</a>
+        <a>cocktail of the day</a>
       </div>
       <div>
-        <a>Surprize me!</a>
+        <a>surprize me!</a>
       </div>
     </nav>
   );
