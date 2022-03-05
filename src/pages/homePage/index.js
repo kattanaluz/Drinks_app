@@ -2,30 +2,15 @@ import Home from "../../components/home";
 import { useState, useEffect } from "react";
 import Recipe from "../../components/recipe";
 import css from "./home.module.css";
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function HomePage() {
   const navigate = useNavigate();
 
-  const [input, setInput] = useState();
-  function getInputText(e) {
-    console.log(e.target.value);
-    setInput(e.target.value);
-  }
+  const [text, setText] = useState("sangria");
 
-  const [text, setText] = useState("mojito");
-  function handleClick() {
-    setText(input);
-    navigate("/recipe");
-  }
-  function onKeyUp(e) {
-    if (e.keyCode === 13) {
-      setText(input);
-      navigate(`/recipe/${text}`);
-    }
-  }
+  const [data, setData] = useState(undefined);
 
-  const [data, setData] = useState([]);
   useEffect(() => {
     async function getData() {
       const response = await fetch(
@@ -41,6 +26,24 @@ export default function HomePage() {
     }
     getData();
   }, [text]);
+
+  const [input, setInput] = useState();
+  function getInputText(e) {
+    console.log(e.target.value);
+    setInput(e.target.value);
+  }
+
+  function handleClick() {
+    setText(input);
+    navigate(`/recipe/${input}`);
+  }
+
+  function onKeyUp(e) {
+    if (e.keyCode === 13) {
+      setText(input);
+      navigate(`/recipe/${input}`);
+    }
+  }
   if (data && data.drinks && data.drinks.length > 0) {
     var content = [];
     for (var i = 0; i < data.drinks.length; i++) {

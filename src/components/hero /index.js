@@ -1,13 +1,13 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "../home";
-import Recipe from "../recipe";
+import HomePage from "../../pages/homePage";
+import RecipePage from "../../pages/recipePage";
 
 function Hero() {
   return (
     <div className="bg-blueWhite flex-grow overflow-y-scroll">
       <Routes>
-        <Route path="/home" element={<Home />} />
-        <Route path="/recipe" element={<Recipe />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/recipe/:text" element={<RecipePage />} />
       </Routes>
     </div>
   );

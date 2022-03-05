@@ -43,7 +43,7 @@ function App() {
   return (
     <div className="App">
       <Hero />
-      <HomePage />
+      {/* <HomePage /> * */}
       {/*  <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/recipe" element={<RecipePage />} />

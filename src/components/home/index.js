@@ -4,7 +4,7 @@ import landImage from "./drink.jpg";
 import Button from "../button";
 import css from "./home.module.css";
 
-export default function Home({ onClick, onChange, onKeyUp }) {
+export default function HomePage({ onClick, onChange, onKeyUp }) {
   const buttonText = "search";
   const inputText = "Type here";
 
