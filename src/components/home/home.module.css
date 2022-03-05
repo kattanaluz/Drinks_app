@@ -175,6 +175,7 @@ h1 {
 @media screen and (max-width: 400px) {
   h1 {
     font-size: 1.3rem;
+    letter-spacing: 2px;
   }
   .searchAndButtonContainer {
     gap: 1.9rem;

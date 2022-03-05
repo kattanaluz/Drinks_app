@@ -27,7 +27,7 @@
 } */
 
 .h2Title {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #fcfafa;
   background-color: rgb(255, 92, 70);
   width: 42%;
@@ -36,4 +36,24 @@
   margin-top: 2%;
   text-align: center;
   font-weight: 600;
+}
+
+@media screen and (max-width: 800px) {
+  .h2Title {
+    font-size: 0.8rem;
+    padding: 0.4rem;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .h2Title {
+    width: 55%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .h2Title {
+    font-size: 0.6rem;
+    width: 55%;
+  }
 }

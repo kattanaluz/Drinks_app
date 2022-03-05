@@ -49,7 +49,7 @@ export default function RecipePage() {
       <>
         <p
           className={css.result}
-        >{`Your search for  "${text}" returned ${content.length} matching results:`}</p>
+        >{`Your search for  "${text}" returned ${content.length} results:`}</p>
         <div className={css.recipeWrapper}>{content}</div>
       </>
     );
