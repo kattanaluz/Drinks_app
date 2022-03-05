@@ -1,5 +1,7 @@
 import HomePage from "../../pages/homePage";
 import Hero from "../hero ";
+/* import Nav from "../nav"; */
+
 /* import { useState, useEffect } from "react";
  import css from "./App.module.css"; */
 
@@ -42,6 +44,7 @@ function App() {
     } */
   return (
     <div className="App">
+      {/*       <Nav /> */}
       <Hero />
       {/* <HomePage /> * */}
       {/*  <Routes>

@@ -45,7 +45,14 @@ export default function RecipePage() {
     for (var i = 0; i < data.drinks.length; i++) {
       content.push(<Recipe data={data.drinks[i]} key={i} />);
     }
-    return <div>{content}</div>;
+    return (
+      <>
+        <p
+          className={css.result}
+        >{`Your search for  "${text}" returned ${content.length} matching results:`}</p>
+        <div className={css.recipeWrapper}>{content}</div>
+      </>
+    );
   } else {
     return (
       <div>

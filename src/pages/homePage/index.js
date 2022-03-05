@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 export default function HomePage() {
   const navigate = useNavigate();
 
-  const [text, setText] = useState("sangria");
+  const [text, setText] = useState("gin");
 
   const [data, setData] = useState(undefined);
 
@@ -52,7 +52,11 @@ export default function HomePage() {
     return (
       <div>
         <Home onClick={handleClick} onChange={getInputText} onKeyUp={onKeyUp} />
-        {content}
+        <div className={css.headingLine}></div>
+        <h2
+          className={css.h2Title}
+        >{`Check out our selection of ${text} recipes`}</h2>
+        <div className={css.recipeWrapper}>{content}</div>
       </div>
     );
   } else {

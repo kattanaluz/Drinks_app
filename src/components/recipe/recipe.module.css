@@ -10,11 +10,10 @@
 .recipeHeader {
   display: flex;
   flex-direction: column;
-
   padding: 0rem;
   background-color: white;
   margin: 1rem;
-  border: 1.5px solid rgb(245, 223, 215);
+  border: 1.5px solid rgb(240, 231, 228);
 }
 
 .recipeHeader:hover {
