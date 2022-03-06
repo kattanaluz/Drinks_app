@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
 
 .noRecipeFound {
   font-family: "Noto Sans", sans-serif;
@@ -12,25 +13,16 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: base-line;
-  margin-right: 5%;
-  margin-left: 5%;
+  margin: 0 5% 5% 5%;
   flex-wrap: wrap;
-  border: solid 1px rgb(247, 192, 173);
+  border: solid 3px #f8ec8c9c;
 }
-
-/* .headingLine {
-  width: 70%;
-  height: 0.2rem;
-  background-color: rgb(245, 223, 215);
-  margin: auto;
-  margin-top: 5%;
-} */
 
 .h2Title {
   font-size: 1.2rem;
-  color: #fcfafa;
-  background-color: rgb(255, 92, 70);
-  width: 42%;
+  color: #2b2c2e;
+  background-color: #f8ec8c9c;
+  width: 36%;
   padding: 1rem;
   margin: auto;
   margin-top: 2%;

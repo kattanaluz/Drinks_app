@@ -16,6 +16,21 @@
   color: rgb(83, 83, 83);
 }
 
+.noRecipeFound {
+  font-size: 1rem;
+  text-align: center;
+  margin: 5% 20% 10% 20%;
+  font-style: bold;
+  color: rgb(83, 83, 83);
+  line-height: 2;
+}
+
+.links {
+  color: rgb(255, 72, 0);
+}
+.tryAgain {
+  color: rgb(255, 72, 0);
+}
 @media screen and (max-width: 406px) {
   .result {
     font-size: 0.7rem;

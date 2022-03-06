@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 export default function HomePage() {
   const navigate = useNavigate();
 
-  const [text, setText] = useState("gin");
+  const [text, setText] = useState("mojito");
 
   const [data, setData] = useState(undefined);
 
@@ -64,8 +64,8 @@ export default function HomePage() {
       <div className="App">
         <Home onClick={handleClick} onChange={getInputText} onKeyUp={onKeyUp} />
         <p className={css.noRecipeFound}>
-          OOPS! Your search for {text} did not return any results. Please search
-          for a different term.
+          {`OOPS! Your search for "${text}" did not return any results. Please
+          search for a different term.`}
         </p>
       </div>
     );

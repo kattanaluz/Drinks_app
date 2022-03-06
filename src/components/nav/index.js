@@ -1,13 +1,16 @@
 import css from "./nav.module.css";
+import { NavLink } from "react-router-dom";
 
 export default function Nav() {
   return (
     <nav className={css.navBar}>
-      <div>
+      {/*       <div>
         <a>cocktail of the day</a>
-      </div>
+      </div> */}
       <div>
-        <a>surprize me!</a>
+        <NavLink className={css.links} to="/recipe/random.php">
+          Surprize me!
+        </NavLink>
       </div>
     </nav>
   );
