@@ -1,8 +1,23 @@
 .navBar {
   display: flex;
   flex-direction: row;
+  justify-content: end;
   background-color: white;
-  border-top: 2px solid rgb(240, 157, 124);
+  border-top: 2px solid #fde635;
   gap: 2rem;
   padding: 0.8rem;
+}
+
+.links {
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.9rem;
+  padding: 10px;
+  font-weight: bold;
+  color: rgb(95, 92, 92);
+}
+
+.links:hover {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
 }
