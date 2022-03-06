@@ -60,10 +60,6 @@ h1 {
   font-family: "Noto Sans", sans-serif;
 }
 
-.searchButton:hover {
-  border: 1px solid rgb(112, 45, 36);
-}
-
 @media screen and (max-width: 1140px) {
   h1 {
     font-size: 2.3rem;

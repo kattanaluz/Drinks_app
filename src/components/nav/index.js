@@ -9,7 +9,7 @@ export default function Nav() {
       </div> */}
       <div>
         <NavLink className={css.links} to="/recipe/random.php">
-          Surprize me!
+          Surprise me!
         </NavLink>
       </div>
     </nav>
