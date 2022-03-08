@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap");
+
+.recipeResults {
+  width: min-content;
+  margin: 0.5rem auto;
+  padding: 2rem;
+}
+
+.recipeHeader {
+  display: flex;
+  flex-direction: column;
+  padding: 0rem;
+  background-color: white;
+  margin: 0rem;
+  border: 1px solid #ebf0d4;
+}
+
+.recipeHeader:hover {
+  border: 1px solid #d6e788;
+}
+
+.drinkImage {
+  width: 12rem;
+}
+
+.recipeType {
+  font-size: 0.6rem;
+  text-align: start;
+  font-weight: 700;
+  padding-left: 1rem;
+  color: rgb(85, 85, 87);
+}
+
+.recipeH2 {
+  font-size: 1.2rem;
+  text-align: center;
+  font-family: "Noto Sans", sans-serif;
+  color: rgb(248, 73, 4);
+  margin-top: 0;
+}
+.recipeH2:hover {
+  text-decoration: 2px solid underline;
+}
+
+.division {
+  width: 80%;
+  height: 1.2px;
+  background-color: #ebf0d4;
+  margin: auto;
+}
+
+.openModalBtn {
+  font-family: "Noto Sans", sans-serif;
+  background-color: rgba(243, 200, 218, 0);
+  border: none;
+  font-size: 0.9rem;
+  color: rgb(25, 26, 27);
+  padding: 1rem;
+}
+
+.openModalBtn:hover {
+  font-weight: 700;
+}
+
+/* MODAL STYLES */
+.modal {
+  background-color: rgba(20, 20, 20, 0.897);
+  color: #fffbfb;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 50px;
+  padding: 1rem;
+  margin: auto;
+  margin-top: 4rem;
+}
+
+.closeModalBtn {
+  width: fit-content;
+  background-color: inherit;
+  border: none;
+  color: #fff4f4;
+  font-weight: 900;
+}
+
+.recipeWrapper {
+  width: 40rem;
+  height: fit-content;
+  background-color: rgba(32, 28, 31, 0.103);
+  font-family: "Noto Sans", sans-serif;
+  display: flex;
+  flex-flow: column wrap;
+  border-radius: 50px;
+  padding: 1rem;
+}
+
+h3 {
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.ingredients {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 16px;
+  text-align: start;
+}
+
+.ingredientsParagraph {
+  font-weight: 900;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  line-height: 1.7;
+  border: solid 0.5 (65, 63, 63);
+}
+
+.methodParagraph {
+  font-weight: 900;
+  margin: 0;
+}
+
+p {
+  text-align: justify;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 800px) {
+  .recipeWrapper {
+    width: 30rem;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .drinkImage {
+    width: 9rem;
+  }
+  p {
+    font-size: 14px;
+  }
+  .ingredients {
+    font-size: 14px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  .openModalBtn {
+    font-size: 0.8rem;
+  }
+  .recipeWrapper {
+    width: 25rem;
+  }
+}
+
+@media screen and (max-width: 525px) {
+  .drinkImage {
+    width: 8rem;
+  }
+  .recipeH2 {
+    font-size: 0.9rem;
+  }
+  .recipeWrapper {
+    width: 20rem;
+  }
+  .recipeHeader {
+    padding: 1px;
+
+    margin: 1px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .recipeHeader {
+    margin: 1px;
+    padding: 2px;
+  }
+  .recipeH2 {
+    font-size: 0.7rem;
+  }
+  .drinkImage {
+    width: 6rem;
+  }
+  .recipeWrapper {
+    width: 12rem;
+  }
+  p {
+    font-size: 12px;
+  }
+  .ingredients {
+    font-size: 12px;
+  }
+  h3 {
+    font-size: 14px;
+  }
+  .openModalBtn {
+    font-size: 10px;
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .recipeResults {
+    margin: 0 0 0 0;
+  }
+  .recipeH2 {
+    font-size: 1rem;
+  }
+  .drinkImage {
+    width: 10rem;
+  }
+}
