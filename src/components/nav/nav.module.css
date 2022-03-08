@@ -2,8 +2,9 @@
   display: flex;
   flex-direction: row;
   justify-content: end;
-  background-color: white;
-  border-top: 2px solid #fde635;
+  background-color: #f1f7de;
+  border-bottom: 0.2px solid #e7faa3;
+  box-shadow: -1px 13px 14px -18px rgba(194, 194, 194, 0.445);
   gap: 2rem;
   padding: 0.8rem;
 }
@@ -14,10 +15,30 @@
   font-size: 0.9rem;
   padding: 10px;
   font-weight: bold;
-  color: rgb(95, 92, 92);
+  color: inherit;
 }
 
 .links:hover {
-  color: rgb(0, 0, 0);
+  text-decoration: 1px underline;
   font-weight: bold;
+}
+
+@media screen and (max-width: 650px) {
+  .links {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .links {
+    font-size: 0.7rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .navBar {
+    padding: 0.4rem;
+  }
+  .links {
+    font-size: 0.6rem;
+  }
 }

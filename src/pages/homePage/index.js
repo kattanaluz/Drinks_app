@@ -1,13 +1,13 @@
 import Home from "../../components/home";
 import { useState, useEffect } from "react";
-import Recipe from "../../components/recipe";
+import RecipeModal from "../../components/recipeModal";
 import css from "./home.module.css";
 import { useNavigate } from "react-router-dom";
 
 export default function HomePage() {
   const navigate = useNavigate();
 
-  const [text, setText] = useState("mojito");
+  const [text, setText] = useState("negroni");
 
   const [data, setData] = useState(undefined);
 
@@ -18,8 +18,7 @@ export default function HomePage() {
       );
       const data = await response.json();
       if (data && data.drinks && data.drinks.length > 0) {
-        const drinkRecipe = data;
-        setData(drinkRecipe);
+        setData(data);
       } else {
         setData(null);
       }
@@ -29,33 +28,33 @@ export default function HomePage() {
 
   const [input, setInput] = useState();
   function getInputText(e) {
-    console.log(e.target.value);
     setInput(e.target.value);
   }
 
   function handleClick() {
     setText(input);
-    navigate(`/recipe/${input}`);
+    navigate(`/results/${input}`);
   }
 
   function onKeyUp(e) {
     if (e.keyCode === 13) {
       setText(input);
-      navigate(`/recipe/${input}`);
+      navigate(`/results/${input}`);
     }
   }
   if (data && data.drinks && data.drinks.length > 0) {
     var content = [];
     for (var i = 0; i < data.drinks.length; i++) {
-      content.push(<Recipe data={data.drinks[i]} key={i} />);
+      content.push(<RecipeModal data={data.drinks[i]} key={i} />);
     }
     return (
-      <div>
+      <div className="App">
         <Home onClick={handleClick} onChange={getInputText} onKeyUp={onKeyUp} />
+        <h2 className={css.h2Title}>DISCOVER</h2>
         <div className={css.headingLine}></div>
-        <h2
-          className={css.h2Title}
-        >{`Check out our selection of ${text} recipes`}</h2>
+        <h3
+          className={css.h3Title}
+        >{`Check out our selection of ${text} recipes`}</h3>
         <div className={css.recipeWrapper}>{content}</div>
       </div>
     );

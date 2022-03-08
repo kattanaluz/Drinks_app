@@ -1,18 +1,35 @@
 import css from "./recipe.module.css";
 import Image from "../image";
+import Modal from "react-modal";
+import { useState } from "react";
 
-export default function Recipe({ data }) {
+export default function RecipeModal({ data }) {
+  const [state, setState] = useState(false);
+  function openModal() {
+    setState(true);
+  }
+  function closeModal() {
+    setState(false);
+  }
   return (
-    <>
-      <h2 className={css.recipeH2}>{data.strDrink}</h2>
-      <div className={css.division}></div>
-      <div className={css.recipe}>
-        <div className={css.recipeHeader}>
-          <Image src={data.strDrinkThumb} className={css.drinkImage} />
-        </div>
+    <div className={css.recipeResults}>
+      <div className={css.recipeHeader}>
+        <Image src={data.strDrinkThumb} className={css.drinkImage} />
+        <p className={css.recipeType}>{data.strAlcoholic}</p>
+        <h2 className={css.recipeH2} onClick={openModal}>
+          {data.strDrink}
+        </h2>
+        <div className={css.division}></div>
+        <button className={css.openModalBtn} onClick={openModal}>
+          quick look
+        </button>
+      </div>
+      <Modal isOpen={state} className={css.modal}>
         <div className={css.recipeWrapper}>
-          <p className={css.recipeGlass}>Serve in a {data.strGlass}</p>
-          <p className={css.recipeType}>{data.strAlcoholic}</p>
+          <button onClick={closeModal} className={css.closeModalBtn}>
+            X
+          </button>
+          <h3>{data.strDrink} Recipe</h3>
           <div className={css.ingredients}>
             <p className={css.ingredientsParagraph}>Ingredients</p>
             <ul>
@@ -51,7 +68,7 @@ export default function Recipe({ data }) {
           <p className={css.methodParagraph}>Method</p>
           <p> {data.strInstructions} </p>
         </div>
-      </div>
-    </>
+      </Modal>
+    </div>
   );
 }
