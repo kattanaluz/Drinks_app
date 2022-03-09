@@ -7,7 +7,7 @@ export default function Section() {
     <div className={css.sectionWrapper}>
       <h2 className={css.sectionH2}>DRINKS & COCKTAILS </h2>
       <div className={css.divisionLine}></div>
-      <p>
+      <p className={css.sectionParagraph}>
         Fancy a drink? Here you can find out hundreds and hundreds of cocktail
         recipes. So, make yourself at home and search for your favourite
         cocktail, or, if you are feeling curious, try our section Surprise me!
@@ -17,7 +17,7 @@ export default function Section() {
         <div className={css.monthlyCocktail}>
           <BsFillCalendarMinusFill className={css.icon} /> <br />
           <NavLink className={css.link} to="/cocktail-of-the-month/">
-            Find our selected cocktail of the month!
+            Find out our selected cocktail of the month!
           </NavLink>
         </div>
         <div className={css.surprise}>
