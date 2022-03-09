@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import RecipeModal from "../../components/recipeModal";
 import css from "./home.module.css";
 import { useNavigate } from "react-router-dom";
+import Section from "../../components/sections";
 
 export default function HomePage() {
   const navigate = useNavigate();
@@ -50,11 +51,12 @@ export default function HomePage() {
     return (
       <div className="App">
         <Home onClick={handleClick} onChange={getInputText} onKeyUp={onKeyUp} />
+        <Section />
         <h2 className={css.h2Title}>DISCOVER</h2>
         <div className={css.headingLine}></div>
-        <h3
-          className={css.h3Title}
-        >{`Check out our selection of ${text} recipes`}</h3>
+        <p
+          className={css.discoverParagraph}
+        >{`Check out our selection of ${text} recipes`}</p>
         <div className={css.recipeWrapper}>{content}</div>
       </div>
     );

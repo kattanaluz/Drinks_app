@@ -63,7 +63,7 @@ export default function ResultsPage() {
           {`Your search for "${text}" did not return any results.`} Please
           <span className={css.tryAgain}> search for a different</span> term or
           click{" "}
-          <NavLink className={css.links} to="/recipe/random.php">
+          <NavLink className={css.links} to="/results/random.php">
             here
           </NavLink>{" "}
           and find a delicious drinks recipe.

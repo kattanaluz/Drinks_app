@@ -4,14 +4,16 @@ import { NavLink } from "react-router-dom";
 export default function Nav() {
   return (
     <nav className={css.navBar}>
-      {/*       <div>
+      <NavLink className={css.name} to="/">
+        lemon & mixer
+      </NavLink>
+      {/*    <div>
         <a>cocktail of the day</a>
-      </div> */}
-      <div>
-        <NavLink className={css.links} to="/recipe/random.php">
-          Surprise me!
-        </NavLink>
       </div>
+      <div>
+        <NavLink className={css.links} to="/results/random.php">
+          Surprise me!
+        </NavLink> */}
     </nav>
   );
 }
