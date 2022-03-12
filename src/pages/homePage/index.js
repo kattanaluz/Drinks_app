@@ -1,4 +1,4 @@
-import Home from "../../components/home";
+import Search from "../../components/search";
 import { useState, useEffect } from "react";
 import RecipeModal from "../../components/recipeModal";
 import css from "./home.module.css";
@@ -50,7 +50,11 @@ export default function HomePage() {
     }
     return (
       <div className="App">
-        <Home onClick={handleClick} onChange={getInputText} onKeyUp={onKeyUp} />
+        <Search
+          onClick={handleClick}
+          onChange={getInputText}
+          onKeyUp={onKeyUp}
+        />
         <Section />
         <h2 className={css.h2Title}>DISCOVER</h2>
         <div className={css.headingLine}></div>
@@ -63,7 +67,11 @@ export default function HomePage() {
   } else {
     return (
       <div className="App">
-        <Home onClick={handleClick} onChange={getInputText} onKeyUp={onKeyUp} />
+        <Search
+          onClick={handleClick}
+          onChange={getInputText}
+          onKeyUp={onKeyUp}
+        />
         <p className={css.noRecipeFound}>
           {`OOPS! Your search for "${text}" did not return any results. Please
           search for a different term.`}

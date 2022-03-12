@@ -17,7 +17,7 @@
   text-align: center;
   margin: auto;
   margin-top: 3%;
-  font-size: 1.6rem;
+  font-size: var(--h2Heading);
   padding: 1rem;
 }
 .discoverParagraph {
@@ -37,29 +37,8 @@
   flex-wrap: wrap;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 500px) {
   .h2Title {
-    font-size: 1.4rem;
-  }
-  /*   .discoverParagraph {
     font-size: 1.1rem;
-  } */
-}
-
-@media screen and (max-width: 590px) {
-  .h2Title {
-    font-size: 1.2rem;
   }
-  /*   .discoverParagraph {
-    font-size: 1rem;
-  } */
-}
-
-@media screen and (max-width: 520px) {
-  .h2Title {
-    font-size: 1rem;
-  }
-  /*   .discoverParagraph {
-    font-size: 0.9rem;
-  } */
 }

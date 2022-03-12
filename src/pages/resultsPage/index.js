@@ -7,7 +7,6 @@ import { NavLink } from "react-router-dom";
 export default function ResultsPage() {
   const params = useParams();
   const { text } = params;
-  console.log(text);
 
   const [data, setData] = useState(undefined);
 
@@ -21,7 +20,6 @@ export default function ResultsPage() {
         if (dataRandom && dataRandom.drinks && dataRandom.drinks.length > 0) {
           const drinkRecipeRandom = dataRandom;
           setData(drinkRecipeRandom);
-          console.log(data);
         }
       } else if (text) {
         const response = await fetch(
@@ -58,7 +56,7 @@ export default function ResultsPage() {
     return (
       <div>
         <p className={css.noRecipeFound}>
-          OOOOOOOOPS...
+          OOPS...
           <br />
           {`Your search for "${text}" did not return any results.`} Please
           <span className={css.tryAgain}> search for a different</span> term or

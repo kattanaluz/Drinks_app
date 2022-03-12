@@ -26,10 +26,10 @@
 }
 
 .links {
-  color: rgb(255, 72, 0);
+  color: var(--orange);
 }
 .tryAgain {
-  color: rgb(255, 72, 0);
+  color: var(--orange);
 }
 @media screen and (max-width: 406px) {
   .result {

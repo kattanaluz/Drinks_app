@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import css from "./section.module.css";
 import { BsFillCalendarMinusFill } from "react-icons/bs";
 import { BiDrink } from "react-icons/bi";
+
 export default function Section() {
   return (
     <div className={css.sectionWrapper}>

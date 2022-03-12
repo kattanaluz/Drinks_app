@@ -7,13 +7,6 @@ export default function Nav() {
       <NavLink className={css.name} to="/">
         lemon & mixer
       </NavLink>
-      {/*    <div>
-        <a>cocktail of the day</a>
-      </div>
-      <div>
-        <NavLink className={css.links} to="/results/random.php">
-          Surprise me!
-        </NavLink> */}
     </nav>
   );
 }
