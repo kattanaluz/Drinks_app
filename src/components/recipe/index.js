@@ -5,7 +5,6 @@ export default function Recipe({ data }) {
   return (
     <>
       <h2 className={css.recipeH2}>{data.strDrink}</h2>
-      <div className={css.division}></div>
       <div className={css.recipe}>
         <div className={css.recipeHeader}>
           <Image src={data.strDrinkThumb} className={css.drinkImage} />

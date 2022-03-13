@@ -65,8 +65,8 @@
 
 /* MODAL STYLES */
 .modal {
-  background-color: rgba(66, 158, 103, 0.911);
-  color: #ffffff;
+  background-color: rgba(226, 250, 224, 0.945);
+  color: inherit;
   width: fit-content;
   height: fit-content;
   border-radius: 50px;
@@ -79,10 +79,14 @@
   width: fit-content;
   background-color: inherit;
   border: none;
-  color: #fff4f4;
+  color: inherit;
+  border-radius: 10%;
   font-weight: 900;
 }
 
+.closeModalBtn:hover {
+  text-decoration: solid 1px underline;
+}
 .recipeWrapper {
   width: 40rem;
   height: fit-content;

@@ -1,7 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
 
+:root {
+  --orange: rgb(255, 72, 0);
+  --h2Heading: 1.2rem;
+  --paragraphs: 1rem;
+}
 body {
   margin: 0;
+  margin-bottom: 1rem;
   background-color: rgb(255, 255, 255);
   color: #2b2d31;
   font-family: "Noto Sans", sans-serif;

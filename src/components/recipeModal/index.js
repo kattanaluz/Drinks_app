@@ -27,7 +27,7 @@ export default function RecipeModal({ data }) {
       <Modal isOpen={state} className={css.modal}>
         <div className={css.recipeWrapper}>
           <button onClick={closeModal} className={css.closeModalBtn}>
-            X
+            close
           </button>
           <h3>{data.strDrink} Recipe</h3>
           <div className={css.ingredients}>

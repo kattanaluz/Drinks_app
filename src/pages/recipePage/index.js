@@ -1,5 +1,4 @@
 import Recipe from "../../components/recipe";
-import css from "./recipePage.module.css";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
