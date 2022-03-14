@@ -48,35 +48,17 @@ export default function HomePage() {
     for (var i = 0; i < data.drinks.length; i++) {
       content.push(<RecipeModal data={data.drinks[i]} key={i} />);
     }
-    return (
-      <div className="App">
-        <Search
-          onClick={handleClick}
-          onChange={getInputText}
-          onKeyUp={onKeyUp}
-        />
-        <Section />
-        <h2 className={css.h2Title}>DISCOVER</h2>
-        <div className={css.headingLine}></div>
-        <p
-          className={css.discoverParagraph}
-        >{`Check out our selection of ${text} recipes`}</p>
-        <div className={css.recipeWrapper}>{content}</div>
-      </div>
-    );
-  } else {
-    return (
-      <div className="App">
-        <Search
-          onClick={handleClick}
-          onChange={getInputText}
-          onKeyUp={onKeyUp}
-        />
-        <p className={css.noRecipeFound}>
-          {`OOPS! Your search for "${text}" did not return any results. Please
-          search for a different term.`}
-        </p>
-      </div>
-    );
   }
+  return (
+    <div className="App">
+      <Search onClick={handleClick} onChange={getInputText} onKeyUp={onKeyUp} />
+      <Section />
+      <h2 className={css.h2Title}>DISCOVER</h2>
+      <div className={css.headingLine}></div>
+      <p
+        className={css.discoverParagraph}
+      >{`Check out our selection of ${text} recipes`}</p>
+      <div className={css.recipeWrapper}>{content}</div>
+    </div>
+  );
 }
