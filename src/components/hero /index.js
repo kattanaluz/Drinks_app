@@ -10,7 +10,7 @@ export default function Hero() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/results/:text" element={<ResultsPage />} />
-        <Route path="/recipe/:id" element={<RecipePage />} />
+        <Route path="/recipe/:recipe" element={<RecipePage />} />
         <Route path="/cocktail-of-the-month/" element={<MonthCocktail />} />
       </Routes>
     </div>

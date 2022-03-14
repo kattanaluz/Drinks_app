@@ -23,7 +23,7 @@ export default function Section() {
         </div>
         <div className={css.surprise}>
           <BiDrink className={css.icon} /> <br />
-          <NavLink className={css.link} to="/results/random.php">
+          <NavLink className={css.link} to="/recipe/random.php">
             Surprise me! Discover a new cocktail recipe{" "}
           </NavLink>
         </div>

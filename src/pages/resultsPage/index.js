@@ -12,26 +12,13 @@ export default function ResultsPage() {
 
   useEffect(() => {
     async function getData() {
-      if (text === "random.php") {
-        const responseRandom = await fetch(
-          "https://www.thecocktaildb.com/api/json/v1/1/random.php"
-        );
-        const dataRandom = await responseRandom.json();
-        if (dataRandom && dataRandom.drinks && dataRandom.drinks.length > 0) {
-          const drinkRecipeRandom = dataRandom;
-          setData(drinkRecipeRandom);
-        }
-      } else if (text) {
-        const response = await fetch(
-          `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${text}`
-        );
-        const data = await response.json();
-        if (data && data.drinks && data.drinks.length > 0) {
-          const drinkRecipe = data;
-          setData(drinkRecipe);
-        } else {
-          setData(null);
-        }
+      const response = await fetch(
+        `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${text}`
+      );
+      const data = await response.json();
+      if (data && data.drinks && data.drinks.length > 0) {
+        const drinkRecipe = data;
+        setData(drinkRecipe);
       } else {
         setData(null);
       }
@@ -61,7 +48,7 @@ export default function ResultsPage() {
           {`Your search for "${text}" did not return any results.`} Please
           <span className={css.tryAgain}> search for a different</span> term or
           click{" "}
-          <NavLink className={css.links} to="/results/random.php">
+          <NavLink className={css.links} to="/recipe/random.php">
             here
           </NavLink>{" "}
           and find a delicious drinks recipe.
