@@ -3,7 +3,8 @@ import { NavLink } from "react-router-dom";
 import useFetch from "../../hooks/fetch";
 import css from "./recipePage.module.css";
 import RecipeResults from "../../components/recipeResults";
-
+import image from "./no-recipe-found.jpg";
+import Image from "../../components/image";
 export default function ResultsPage() {
   const params = useParams();
   const { text } = params;
@@ -27,9 +28,9 @@ export default function ResultsPage() {
     );
   } else {
     return (
-      <div>
-        <p className={css.noRecipeFound}>
-          OOPS...
+      <div className={css.noRecipeFoundWrapper}>
+        <p className={css.noRecipeFoundParagraph}>
+          <span className={css.ops}>OOPS...</span>
           <br />
           {`Your search for "${text}" did not return any results.`} Please
           <span className={css.tryAgain}> search for a different</span> term or
@@ -39,6 +40,9 @@ export default function ResultsPage() {
           </NavLink>{" "}
           and find a delicious drinks recipe.
         </p>
+        <div>
+          <Image className={css.imageNoRecipe} src={image} />
+        </div>
       </div>
     );
   }

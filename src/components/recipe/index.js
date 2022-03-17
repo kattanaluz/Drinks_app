@@ -3,7 +3,7 @@ import Image from "../image";
 
 export default function Recipe({ data }) {
   return (
-    <div>
+    <div className={css.recipeContainer}>
       <h2 className={css.recipeH2}>{data.strDrink}</h2>
       <div className={css.recipe}>
         <div className={css.recipeHeader}>

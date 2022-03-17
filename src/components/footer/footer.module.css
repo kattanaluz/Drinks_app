@@ -1,13 +1,12 @@
 .footer {
-  background-color: var(--orange);
-  padding: 1rem;
+  background-color: rgb(246, 247, 243);
+  padding: 0.8rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: auto;
 }
 .infos {
-  color: white;
+  color: inherit;
 }
 
 .icons {
@@ -19,9 +18,9 @@
 
 .linkLinkedinIcon {
   font-size: 1.7rem;
-  color: white;
+  color: rgb(31, 30, 30);
 }
 .linkGitIcon {
   font-size: 1.7rem;
-  color: white;
+  color: rgb(31, 30, 30);
 }

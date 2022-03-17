@@ -9,21 +9,21 @@
 }
 .landPageH1 {
   font-size: 2.5em;
-  margin-top: 12%;
+  margin-top: 11%;
   border-radius: 15px;
   position: absolute;
   font-family: "Hammersmith One", sans-serif;
-  color: #2b2c2e;
+  color: inherit;
 }
 .landPageImage {
-  max-width: 100%;
+  width: 100%;
   max-height: auto;
 }
 .searchAndButtonContainer {
   display: flex;
   flex-flow: row;
   gap: 21rem;
-  margin-top: 17%;
+  margin-top: 16%;
   position: absolute;
 }
 ::placeholder {
@@ -77,13 +77,13 @@
 @media screen and (max-width: 950px) {
   .landPageH1 {
     font-size: 2.2rem;
-    margin-top: 12%;
+    margin-top: 11%;
   }
 }
 @media screen and (max-width: 900px) {
   .landPageH1 {
     font-size: 2.1rem;
-    margin-top: 11.5%;
+    margin-top: 10.5%;
   }
   .searchAndButtonContainer {
     gap: 11rem;
@@ -101,7 +101,7 @@
 @media screen and (max-width: 750px) {
   .landPageH1 {
     font-size: 2rem;
-    margin-top: 11%;
+    margin-top: 10%;
   }
   .searchAndButtonContainer {
     gap: 7rem;
@@ -114,11 +114,10 @@
     font-size: 12px;
   }
 }
-
 @media screen and (max-width: 650px) {
   .landPageH1 {
     font-size: 1.9rem;
-    margin-top: 10.5%;
+    margin-top: 9.5%;
   }
   .searchAndButtonContainer {
     gap: 5rem;

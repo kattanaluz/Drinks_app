@@ -5,7 +5,6 @@ import useFetch from "../../hooks/fetch";
 import Search from "../../components/search";
 import RecipeModal from "../../components/recipeModal";
 import Section from "../../components/sections";
-import Footer from "../../components/footer";
 
 export default function HomePage() {
   const navigate = useNavigate();
@@ -58,7 +57,6 @@ export default function HomePage() {
           className={css.discoverParagraph}
         >{`Check out our selection of ${text} recipes`}</p>
         <div className={css.recipeWrapper}>{content}</div>
-        <Footer />
       </div>
     );
   } else {

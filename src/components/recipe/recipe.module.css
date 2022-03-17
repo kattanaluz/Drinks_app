@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap");
+.recipeContainer {
+  margin: 1rem 5rem 1.5rem 5rem;
+  border-radius: 25px;
+  padding: 1rem 1rem 1rem 1rem;
+  background-color: rgb(243, 253, 243);
+}
 .recipe {
   display: flex;
   flex-direction: row;
@@ -30,7 +36,7 @@
 }
 
 .recipeWrapper {
-  width: 30rem;
+  width: 45rem;
   margin-left: 1%;
   padding: 0 1rem 1rem 1rem;
 }
@@ -81,6 +87,9 @@ p {
 @media screen and (max-width: 800px) {
   .recipeWrapper {
     width: 30rem;
+  }
+  .recipeContainer {
+    margin: 1rem 2rem 1.5rem 2rem;
   }
 }
 

@@ -14,40 +14,57 @@
   color: var(--orange);
   font-size: 1.8rem;
   font-weight: 900;
-  margin-left: 43%;
+  margin-left: 2rem;
   text-decoration: none;
-  margin: auto;
+}
+.iconsAndButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 .navSearchBtn {
   border: none;
+  padding: none;
   background-color: inherit;
 }
-.searchIcon {
+.icon {
   color: rgb(151, 148, 151);
   font-size: 1.4rem;
   margin-top: 5px;
-  padding: auto;
+  padding: 2px;
 }
 
 .modalNav {
   display: flex;
   justify-content: center;
+  background-color: rgba(248, 250, 246, 0.527);
+  height: 100vh;
 }
 .inputAndButton {
   display: flex;
   flex-direction: column;
+  height: 10rem;
+  border-radius: 10px;
   margin-top: 3rem;
 }
 .navInput {
-  border: 0.5px solid rgb(218, 217, 217);
-  border-radius: 20px;
-  padding: 1.2rem;
-  margin-top: 1px;
-  width: 35rem;
+  border: 1px solid rgb(233, 230, 230);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  /*  border-radius: 20px; */
+  padding: 1.5rem;
+  margin-top: 2rem;
+  width: 40rem;
   align-self: flex-end;
   font-family: inherit;
   font-size: 1.2rem;
+}
+::placeholder {
+  color: #969494;
+  font-weight: 900;
 }
 .navInput:focus {
   outline: none;
@@ -56,24 +73,34 @@
   border: none;
   background-color: inherit;
   width: fit-content;
+  color: #969494;
 }
 .closeModalNavIcon {
   font-size: 1.2rem;
+  color: #969494;
+  font-weight: 9000;
+}
+@media screen and (max-width: 710px) {
+  .navInput {
+    padding: 1rem;
+    width: 38rem;
+    font-size: 1.2rem;
+  }
 }
 @media screen and (max-width: 650px) {
   .name {
     font-size: 1.4rem;
   }
-
   .navInput {
     padding: 1rem;
-    width: 25rem;
+    width: 31rem;
     font-size: 1rem;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 530px) {
   .name {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
+    margin-left: 1rem;
   }
   .navBar {
     padding: 0.6rem;
@@ -82,13 +109,16 @@
     width: 20rem;
     font-size: 0.9rem;
   }
+  .iconsAndButton {
+    gap: 1px;
+  }
+  .icon {
+    font-size: 0.8rem;
+  }
 }
 @media screen and (max-width: 400px) {
   .navBar {
     padding: 0.4rem;
-  }
-  .inputAndButton {
-    margin-top: 2.5rem;
   }
   .navInput {
     width: 17rem;

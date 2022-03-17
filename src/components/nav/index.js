@@ -6,6 +6,7 @@ import { useState } from "react";
 import Button from "../button";
 import Input from "../input";
 import Modal from "react-modal";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
 export default function Nav() {
   const [state, setState] = useState(false);
@@ -35,11 +36,26 @@ export default function Nav() {
       <NavLink className={css.name} to="/">
         lemon & mixer
       </NavLink>
-      <Button
-        className={css.navSearchBtn}
-        onClick={openModal}
-        text={<HiSearch className={css.searchIcon} />}
-      />
+      <div className={css.iconsAndButton}>
+        <div className={css.linkedinIcon}>
+          <Button
+            className={css.navSearchBtn}
+            onClick={openModal}
+            text={<HiSearch className={css.icon} />}
+          />
+          <a
+            href="https://www.linkedin.com/in/kattana-luz-6b1000124/"
+            target="_blank"
+          >
+            <AiFillLinkedin className={css.icon} />
+          </a>
+        </div>
+        <div className={css.gitIcon}>
+          <a href="https://github.com/kattanaluz" target="_blank">
+            <AiFillGithub className={css.icon} />
+          </a>
+        </div>
+      </div>
       <Modal isOpen={state} className={css.modalNav}>
         <div className={css.inputAndButton}>
           <Button
@@ -47,6 +63,7 @@ export default function Nav() {
             onClick={closeModal}
             text={<GrFormClose className={css.closeModalNavIcon} />}
           />
+
           <Input
             inputClassName={css.navInput}
             onChange={getInputText}

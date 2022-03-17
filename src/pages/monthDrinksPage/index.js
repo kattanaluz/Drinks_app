@@ -58,9 +58,11 @@ export default function MonthlyCocktail() {
     return (
       <div className={css.monthlyRecipeWrapper}>
         <h1 className={css.h1Header}>{`${monthList[month]} Cocktail`}</h1>
-        <h2 className={css.h2Header}>{`${monthTexts[month]}`}</h2>
         <div className={css.divisionLine}></div>
-        <Recipe data={data.drinks[0]} />
+        <h2 className={css.h2Header}>{`${monthTexts[month]}`}</h2>
+        <div className={css.recipeContainer}>
+          <Recipe data={data.drinks[0]} />
+        </div>
       </div>
     );
   } else {
