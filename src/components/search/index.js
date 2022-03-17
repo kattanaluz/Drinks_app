@@ -4,10 +4,7 @@ import landImage from "./drink.jpg";
 import Button from "../button";
 import css from "./search.module.css";
 
-export default function search({ onClick, onChange, onKeyUp }) {
-  const buttonText = "search";
-  const inputText = "Type here";
-
+export default function Search({ onClick, onChange, onKeyUp, options }) {
   return (
     <div>
       <div className={css.ImageContainer}>
@@ -15,14 +12,28 @@ export default function search({ onClick, onChange, onKeyUp }) {
         <h1 className={css.landPageH1}>Find a drink recipe</h1>
         <div className={css.searchAndButtonContainer}>
           <Input
-            placeholder={inputText}
+            placeholder={"Type here"}
             divClassName={css.divInput}
             inputClassName={css.searchInput}
             onChange={onChange}
             onKeyUp={onKeyUp}
+            list="data"
           />
+          {options && options.drinks ? (
+            <datalist id="data">
+              {options.drinks.map((item, index) => {
+                return (
+                  <option
+                    value={item.strDrink}
+                    key={index}
+                    className={css.options}
+                  />
+                );
+              })}
+            </datalist>
+          ) : null}
           <Button
-            text={buttonText}
+            text={"Search"}
             className={css.searchButton}
             onClick={onClick}
           />

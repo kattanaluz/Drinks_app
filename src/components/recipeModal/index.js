@@ -1,6 +1,7 @@
 import css from "./recipe.module.css";
 import Image from "../image";
 import Modal from "react-modal";
+import Button from "../button";
 import { useState } from "react";
 
 export default function RecipeModal({ data }) {
@@ -20,15 +21,19 @@ export default function RecipeModal({ data }) {
           {data.strDrink}
         </h2>
         <div className={css.division}></div>
-        <button className={css.openModalBtn} onClick={openModal}>
-          quick look
-        </button>
+        <Button
+          className={css.openModalBtn}
+          onClick={openModal}
+          text="quick look"
+        />
       </div>
-      <Modal isOpen={state} className={css.modal}>
+      <Modal isOpen={state} className={css.modalRecipe}>
         <div className={css.recipeWrapper}>
-          <button onClick={closeModal} className={css.closeModalBtn}>
-            close
-          </button>
+          <Button
+            onClick={closeModal}
+            className={css.closeModalRecipeBtn}
+            text="close"
+          />
           <h3>{data.strDrink} Recipe</h3>
           <div className={css.ingredients}>
             <p className={css.ingredientsParagraph}>Ingredients</p>

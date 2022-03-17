@@ -13,23 +13,73 @@
   text-align: center;
   margin-top: 2rem;
   font-style: bold;
-  color: rgb(83, 83, 83);
+  color: inherit;
 }
 
-.noRecipeFound {
+.noRecipeFoundWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  background-color: #cde59b;
+  margin: 5rem 10rem 5rem 10rem;
+}
+
+.noRecipeFoundParagraph {
   font-size: 1rem;
   text-align: center;
-  margin: 5% 20% 10% 20%;
+  margin: auto;
   font-style: bold;
-  color: rgb(83, 83, 83);
+  color: rgb(27, 27, 27);
   line-height: 2;
+  padding: 5rem;
 }
-
+.ops {
+  font-size: 2rem;
+}
 .links {
   color: var(--orange);
 }
 .tryAgain {
   color: var(--orange);
+}
+.imageNoRecipe {
+  width: 350px;
+}
+@media screen and (max-width: 1050px) {
+  .noRecipeFoundWrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .noRecipeFoundParagraph {
+    padding: 3rem 5rem 0rem 5rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .imageNoRecipe {
+    width: 250px;
+  }
+  .noRecipeFoundWrapper {
+    margin: 2rem 6rem 2rem 6rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .noRecipeFoundParagraph {
+    padding: 3rem 2rem 0rem 2rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .result {
+    font-size: 0.7rem;
+  }
+  .noRecipeFoundWrapper {
+    margin: 2rem 3rem 2rem 3rem;
+  }
+  .noRecipeFoundParagraph {
+    padding: 1rem 1rem 0rem 1rem;
+  }
 }
 @media screen and (max-width: 406px) {
   .result {

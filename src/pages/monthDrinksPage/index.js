@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import useFetch from "../../hooks/fetch";
 import Recipe from "../../components/recipe";
 import css from "./monthDrinksPage.module.css";
 
@@ -50,28 +50,19 @@ export default function MonthlyCocktail() {
   ];
   const monthlyCocktail = cocktails[month];
 
-  const [recipe, setRecipe] = useState(undefined);
+  const [data] = useFetch(
+    `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${monthlyCocktail}`
+  );
 
-  useEffect(() => {
-    async function getData() {
-      const response = await fetch(
-        `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${monthlyCocktail}`
-      );
-      const data = await response.json();
-      console.log(data.drinks);
-      setRecipe(data.drinks[0]);
-      console.log(recipe);
-    }
-    getData();
-  }, [monthlyCocktail]);
-
-  if (recipe) {
+  if (data && data.drinks && data.drinks.length > 0) {
     return (
       <div className={css.monthlyRecipeWrapper}>
         <h1 className={css.h1Header}>{`${monthList[month]} Cocktail`}</h1>
-        <h2 className={css.h2Header}>{`${monthTexts[month]}`}</h2>
         <div className={css.divisionLine}></div>
-        <Recipe data={recipe} />
+        <h2 className={css.h2Header}>{`${monthTexts[month]}`}</h2>
+        <div className={css.recipeContainer}>
+          <Recipe data={data.drinks[0]} />
+        </div>
       </div>
     );
   } else {

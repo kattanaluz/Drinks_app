@@ -4,6 +4,7 @@ export default function Input({
   onChange,
   onKeyUp,
   placeholder,
+  list,
 }) {
   return (
     <div className={divClassName}>
@@ -13,6 +14,7 @@ export default function Input({
         onChange={onChange}
         placeholder={placeholder}
         onKeyUp={onKeyUp}
+        list={list}
       />
     </div>
   );
