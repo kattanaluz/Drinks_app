@@ -1,5 +1,6 @@
 import css from "./recipeResults.module.css";
 import Image from "../image";
+import Button from "../button";
 import { useNavigate } from "react-router-dom";
 
 export default function RecipeResults({ data }) {
@@ -17,12 +18,11 @@ export default function RecipeResults({ data }) {
           {data.strDrink}
         </h2>
         <div className={css.division}></div>
-        <button
+        <Button
           className={css.openModalBtn}
           onClick={() => navigate(`/recipe/${data.idDrink}`)}
-        >
-          see recipe
-        </button>
+          text="see recipe"
+        />
       </div>
     </div>
   );

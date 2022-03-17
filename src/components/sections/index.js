@@ -1,5 +1,5 @@
-import { NavLink } from "react-router-dom";
 import css from "./section.module.css";
+import { NavLink } from "react-router-dom";
 import { BsFillCalendarMinusFill } from "react-icons/bs";
 import { BiDrink } from "react-icons/bi";
 

@@ -35,28 +35,31 @@ export default function HomePage() {
     `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${input}`
   );
 
-  console.log(input);
   if (data && data.drinks && data.drinks.length > 0) {
-    var content = [];
-    for (var i = 0; i < data.drinks.length; i++) {
+    let content = [];
+    for (let i = 0; i < data.drinks.length; i++) {
       content.push(<RecipeModal data={data.drinks[i]} key={i} />);
     }
+    return (
+      <div>
+        <Search
+          onClick={handleClick}
+          onChange={getInputText}
+          onKeyUp={onKeyUp}
+          options={options}
+        />
+        <Section />
+        <h2
+          className={css.h2Title}
+        >{`${text.toLocaleUpperCase()} SELECTION`}</h2>
+        <div className={css.headingLine}></div>
+        <p
+          className={css.discoverParagraph}
+        >{`Check out our selection of ${text} recipes`}</p>
+        <div className={css.recipeWrapper}>{content}</div>
+      </div>
+    );
+  } else {
+    return <p>Loading...</p>;
   }
-  return (
-    <div className="App">
-      <Search
-        onClick={handleClick}
-        onChange={getInputText}
-        onKeyUp={onKeyUp}
-        options={options}
-      />
-      <Section />
-      <h2 className={css.h2Title}>DISCOVER</h2>
-      <div className={css.headingLine}></div>
-      <p
-        className={css.discoverParagraph}
-      >{`Check out our selection of ${text} recipes`}</p>
-      <div className={css.recipeWrapper}>{content}</div>
-    </div>
-  );
 }

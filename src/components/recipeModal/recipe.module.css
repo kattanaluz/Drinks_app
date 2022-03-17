@@ -64,7 +64,7 @@
 }
 
 /* MODAL STYLES */
-.modal {
+.modalRecipe {
   background-color: rgba(226, 250, 224, 0.945);
   color: inherit;
   width: fit-content;
@@ -75,7 +75,7 @@
   margin-top: 4rem;
 }
 
-.closeModalBtn {
+.closeModalRecipeBtn {
   width: fit-content;
   background-color: inherit;
   border: none;

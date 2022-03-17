@@ -3,24 +3,72 @@
 .navBar {
   display: flex;
   flex-direction: row;
-  justify-content: end;
+  justify-content: space-between;
+  align-items: center;
   background-color: white;
   border-bottom: 0.2px solid #e0dddd;
-  gap: 2rem;
   padding: 0.9rem;
 }
 .name {
   font-family: "Abril Fatface", cursive;
   color: var(--orange);
-  text-align: center;
-  margin: auto;
   font-size: 1.8rem;
   font-weight: 900;
+  margin-left: 43%;
   text-decoration: none;
+  margin: auto;
+}
+
+.navSearchBtn {
+  border: none;
+  background-color: inherit;
+}
+.searchIcon {
+  color: rgb(151, 148, 151);
+  font-size: 1.4rem;
+  margin-top: 5px;
+  padding: auto;
+}
+
+.modalNav {
+  display: flex;
+  justify-content: center;
+}
+.inputAndButton {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+.navInput {
+  border: 0.5px solid rgb(218, 217, 217);
+  border-radius: 20px;
+  padding: 1.2rem;
+  margin-top: 1px;
+  width: 35rem;
+  align-self: flex-end;
+  font-family: inherit;
+  font-size: 1.2rem;
+}
+.navInput:focus {
+  outline: none;
+}
+.closeModalNavBtn {
+  border: none;
+  background-color: inherit;
+  width: fit-content;
+}
+.closeModalNavIcon {
+  font-size: 1.2rem;
 }
 @media screen and (max-width: 650px) {
   .name {
     font-size: 1.4rem;
+  }
+
+  .navInput {
+    padding: 1rem;
+    width: 25rem;
+    font-size: 1rem;
   }
 }
 @media screen and (max-width: 500px) {
@@ -30,9 +78,19 @@
   .navBar {
     padding: 0.6rem;
   }
+  .navInput {
+    width: 20rem;
+    font-size: 0.9rem;
+  }
 }
 @media screen and (max-width: 400px) {
   .navBar {
     padding: 0.4rem;
+  }
+  .inputAndButton {
+    margin-top: 2.5rem;
+  }
+  .navInput {
+    width: 17rem;
   }
 }
