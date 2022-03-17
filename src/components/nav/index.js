@@ -51,7 +51,7 @@ export default function Nav() {
             inputClassName={css.navInput}
             onChange={getInputText}
             onKeyUp={onKeyUp}
-            placeholder="Search"
+            placeholder="Search a recipe"
           />
         </div>
       </Modal>

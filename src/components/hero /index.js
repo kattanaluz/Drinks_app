@@ -3,10 +3,11 @@ import HomePage from "../../pages/homePage";
 import ResultsPage from "../../pages/resultsPage";
 import RecipePage from "../../pages/recipePage";
 import MonthCocktail from "../../pages/monthDrinksPage";
+import css from "./hero.module.css";
 
-export default function Hero() {
+export default function Hero({ className }) {
   return (
-    <div>
+    <div className={className}>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/results/:text" element={<ResultsPage />} />

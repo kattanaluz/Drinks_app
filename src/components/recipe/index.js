@@ -3,7 +3,7 @@ import Image from "../image";
 
 export default function Recipe({ data }) {
   return (
-    <>
+    <div>
       <h2 className={css.recipeH2}>{data.strDrink}</h2>
       <div className={css.recipe}>
         <div className={css.recipeHeader}>
@@ -51,6 +51,6 @@ export default function Recipe({ data }) {
           <p> {data.strInstructions} </p>
         </div>
       </div>
-    </>
+    </div>
   );
 }
