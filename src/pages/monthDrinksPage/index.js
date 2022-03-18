@@ -58,7 +58,9 @@ export default function MonthlyCocktail() {
     return (
       <>
         <div className={css.monthlyRecipeWrapper}>
-          <h1 className={css.h1Header}>{`${monthList[month]} Cocktail`}</h1>
+          <h1 className={css.h1Header}>{`${monthList[
+            month
+          ].toUpperCase()} COCKTAIL`}</h1>
           <div className={css.divisionLine}></div>
           <h2 className={css.h2Header}>{`${monthTexts[month]}`}</h2>
         </div>

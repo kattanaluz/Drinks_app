@@ -16,8 +16,10 @@ export default function Spirit({ data }) {
 
   return (
     <div className={css.spiritWrapper}>
-      <h1 className={css.spiritH1}>{data.ingredients[0].strIngredient}</h1>
-      <h2 className={css.spiritH2}>Interesting facts</h2>
+      <h1 className={css.spiritH1}>
+        {data.ingredients[0].strIngredient.toUpperCase()}
+      </h1>
+      <div className={css.divisionLine}></div>
       <div>
         <p className={css.spiritParagraph}>{firstSentence}</p>
         <p className={css.spiritParagraph}>{secondSentence}</p>

@@ -9,6 +9,7 @@
 .spiritResultsH2 {
   font-size: 1.1rem;
   font-weight: 500;
+  margin: 0 2rem 0 2rem;
 }
 .spiritsWrapper {
   display: flex;
@@ -34,4 +35,22 @@
 }
 .spiritLink:hover {
   text-decoration: underline;
+}
+@media screen and (max-width: 560px) {
+  .spiritsWrapper {
+    gap: 5rem;
+  }
+  .spiritImage {
+    width: 170px;
+    height: auto;
+  }
+}
+@media screen and (max-width: 460px) {
+  .spiritsWrapper {
+    gap: 3rem;
+  }
+  .spiritImage {
+    width: 130px;
+    height: auto;
+  }
 }
