@@ -1,0 +1,37 @@
+.spiritsContainer {
+  text-align: center;
+}
+.spiritResultsH1 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-top: 2rem;
+}
+.spiritResultsH2 {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.spiritsWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 6rem;
+  flex-wrap: wrap;
+  margin: 4rem 5% 2rem 5%;
+}
+.spiritImage {
+  width: 200px;
+  height: auto;
+}
+.spiritImage:hover {
+  width: 198px;
+  height: auto;
+}
+.spiritLink {
+  text-decoration: none;
+  color: var(--orange);
+  font-weight: 700;
+  font-size: 1rem;
+}
+.spiritLink:hover {
+  text-decoration: underline;
+}

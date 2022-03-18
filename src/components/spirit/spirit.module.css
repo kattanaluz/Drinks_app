@@ -1,0 +1,19 @@
+.spiritWrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.spiritH1 {
+  font-size: 1.3rem;
+  padding: 0;
+  margin: 1rem 0 1rem 0;
+}
+.spiritH2 {
+  font-size: 1.1rem;
+  padding: 0;
+  margin: 2rem 0 1rem 0;
+}
+.spiritParagraph {
+  text-align: justify;
+}

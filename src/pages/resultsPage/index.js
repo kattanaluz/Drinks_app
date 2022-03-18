@@ -5,6 +5,7 @@ import css from "./recipePage.module.css";
 import RecipeResults from "../../components/recipeResults";
 import image from "./no-recipe-found.jpg";
 import Image from "../../components/image";
+
 export default function ResultsPage() {
   const params = useParams();
   const { text } = params;
