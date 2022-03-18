@@ -56,14 +56,16 @@ export default function MonthlyCocktail() {
 
   if (data && data.drinks && data.drinks.length > 0) {
     return (
-      <div className={css.monthlyRecipeWrapper}>
-        <h1 className={css.h1Header}>{`${monthList[month]} Cocktail`}</h1>
-        <div className={css.divisionLine}></div>
-        <h2 className={css.h2Header}>{`${monthTexts[month]}`}</h2>
-        <div className={css.recipeContainer}>
-          <Recipe data={data.drinks[0]} />
+      <>
+        <div className={css.monthlyRecipeWrapper}>
+          <h1 className={css.h1Header}>{`${monthList[
+            month
+          ].toUpperCase()} COCKTAIL`}</h1>
+          <div className={css.divisionLine}></div>
+          <h2 className={css.h2Header}>{`${monthTexts[month]}`}</h2>
         </div>
-      </div>
+        <Recipe data={data.drinks[0]} />
+      </>
     );
   } else {
     return <p>Loading...</p>;

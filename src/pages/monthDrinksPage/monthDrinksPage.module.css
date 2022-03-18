@@ -2,17 +2,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .h1Header {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin-top: 3rem;
   margin-bottom: 5px;
 }
 .h2Header {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 500;
   padding: 0.5rem;
-  margin: 0 2rem 2rem 2rem;
+  margin: 0.5rem 2rem 2rem 2rem;
   font-style: italic;
   text-align: center;
 }
@@ -22,12 +24,7 @@
   height: 0.5px;
   margin: auto;
 }
-.recipeContainer {
-  margin: 0 5rem 1.5rem 5rem;
-  border-radius: 25px;
-  padding: 0 1rem 1rem 1rem;
-  background-color: rgb(243, 253, 243);
-}
+
 @media screen and (max-width: 600px) {
   .h1Header {
     font-size: 1.4rem;
