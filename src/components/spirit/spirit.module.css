@@ -3,6 +3,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
+  margin: 0 4rem 0 4rem;
 }
 .spiritH1 {
   font-size: 1.3rem;

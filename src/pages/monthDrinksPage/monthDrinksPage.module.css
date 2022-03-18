@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .h1Header {
   font-size: 1.5rem;
@@ -22,12 +24,7 @@
   height: 0.5px;
   margin: auto;
 }
-.recipeContainer {
-  margin: 0 5rem 1.5rem 5rem;
-  border-radius: 25px;
-  padding: 0 1rem 1rem 1rem;
-  background-color: rgb(243, 253, 243);
-}
+
 @media screen and (max-width: 600px) {
   .h1Header {
     font-size: 1.4rem;
