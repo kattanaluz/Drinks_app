@@ -1,13 +1,13 @@
 import Image from "../image";
-import brandy from "./brandy.jpg";
-import bourbon from "./bourbon.jpg";
-import gin from "./gin.jpg";
 import css from "./spirits.module.css";
-import cachaca from "./cachaca.jpg";
-import rum from "./run.jpg";
-import tequila from "./tequila.jpg";
-import vodka from "./vodka.png";
-import whiskey from "./whiskey.jpg";
+import brandy from "./images/brandy.jpg";
+import bourbon from "./images/bourbon.jpg";
+import gin from "./images/gin.jpg";
+import cachaca from "./images/cachaca.jpg";
+import rum from "./images/rum.jpg";
+import tequila from "./images/tequila.jpg";
+import vodka from "./images/vodka.png";
+import whiskey from "./images/whiskey.jpg";
 import { NavLink } from "react-router-dom";
 
 export default function SpiritSelection() {
